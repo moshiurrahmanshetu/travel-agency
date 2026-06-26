@@ -100,23 +100,43 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Testimonials Swiper
+    // Testimonials Swiper — isolated instance, unique selectors only
     new Swiper('.testimonials-swiper', {
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 28,
       loop: true,
+      speed: 600,
+      grabCursor: true,
+      centeredSlides: false,
       autoplay: {
-        delay: 6000,
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
       },
       pagination: {
         el: '.testimonials-pagination',
         clickable: true,
+        dynamicBullets: false,
+      },
+      navigation: {
+        nextEl: '.testimonials-next',
+        prevEl: '.testimonials-prev',
       },
       breakpoints: {
+        // mobile: 1 card (default above)
         768: {
           slidesPerView: 2,
+          spaceBetween: 24,
         },
-      }
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 28,
+        },
+      },
     });
   }
 
