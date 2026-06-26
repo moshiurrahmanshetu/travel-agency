@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sovereign Luxury Tour Packages &amp; Bespoke Expeditions - WanderLuxe Atelier</title>
+  <meta name="description" content="Explore WanderLuxe's exclusive portfolio of bespoke luxury tours, private jet circumnavigations, superyacht charters, royal wildlife safaris, and imperial cultural buyouts." />
+  
+  <!-- Google Fonts (Inter, Outfit & Playfair Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper JS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- ThemeForest Ultra-Premium Quality Styles -->
+  <style>
+    :root {
+      --wl-primary: #0C6EFD;
+      --wl-secondary: #00BFA6;
+      --wl-accent: #FFB703;
+      --wl-dark: #0f172a;
+      --wl-slate: #1e293b;
+      --wl-light-bg: #f8fafc;
+      --wl-border: rgba(15, 23, 42, 0.08);
+      --wl-gold: #d4af37;
+      --wl-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #334155;
+      background-color: var(--wl-light-bg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.025em;
+      color: var(--wl-dark);
+    }
+
+    .font-serif-luxury {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .backdrop-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Top Bar & Header */
+    .header-top {
+      background: var(--wl-dark);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.85rem;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .top-divider {
+      color: rgba(255, 255, 255, 0.25);
+      margin: 0 12px;
+    }
+
+    /* Navigation */
+    .main-navbar {
+      transition: var(--wl-transition);
+    }
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.75rem;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: var(--wl-slate) !important;
+      transition: var(--wl-transition);
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--wl-primary) !important;
+    }
+
+    /* Hero Section */
+    .tours-hero {
+      position: relative;
+      min-height: 62vh;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.85) 100%), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 90px;
+      color: white;
+    }
+
+    /* Glassmorphic Breadcrumb */
+    .breadcrumb-custom {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 10px 24px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      margin-bottom: 24px;
+    }
+    .breadcrumb-custom a {
+      color: var(--wl-accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--wl-transition);
+    }
+    .breadcrumb-custom a:hover {
+      color: white;
+    }
+    .breadcrumb-custom span {
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0 10px;
+      font-size: 0.85rem;
+    }
+    .breadcrumb-custom .active {
+      color: white;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* Advanced Filter Bar */
+    .advanced-filter-container {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.07);
+      border: 1px solid var(--wl-border);
+      margin-top: -60px;
+      position: relative;
+      z-index: 20;
+    }
+    .filter-pill-btn {
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--wl-transition);
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      color: var(--wl-slate);
+    }
+    .filter-pill-btn:hover, .filter-pill-btn.active {
+      background: var(--wl-dark);
+      color: white;
+      border-color: var(--wl-dark);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+      transform: translateY(-2px);
+    }
+    .form-control-luxe, .form-select-luxe {
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      background: #f8fafc;
+      transition: var(--wl-transition);
+    }
+    .form-control-luxe:focus, .form-select-luxe:focus {
+      background: white;
+      border-color: var(--wl-primary);
+      box-shadow: 0 0 0 4px rgba(12, 110, 253, 0.12);
+    }
+
+    /* Featured Tour Masterpiece Card */
+    .featured-tour-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 32px;
+      overflow: hidden;
+      color: white;
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+    }
+    .featured-tour-img {
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .featured-tour-card:hover .featured-tour-img {
+      transform: scale(1.08);
+    }
+    .offer-badge-vip {
+      background: linear-gradient(135deg, #FFB703 0%, #FB8500 100%);
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 18px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(251, 133, 0, 0.35);
+      display: inline-block;
+    }
+
+    /* Tour Cards Grid */
+    .tour-card-ultra {
+      background: white;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      transition: var(--wl-transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .tour-card-ultra:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+      border-color: rgba(12, 110, 253, 0.3);
+    }
+    .tour-img-wrapper {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+    .tour-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tour-card-ultra:hover .tour-card-img {
+      transform: scale(1.1);
+    }
+    .badge-category {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .badge-offer-label {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--wl-accent);
+      color: var(--wl-dark);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(255, 183, 3, 0.4);
+    }
+    .badge-duration {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fffbeb;
+      color: #b45309;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid #fde68a;
+    }
+    .price-tag {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--wl-dark);
+    }
+    .price-sub {
+      font-size: 0.8rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* Custom Pagination */
+    .custom-pagination .page-link {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50% !important;
+      font-weight: 700;
+      color: var(--wl-slate);
+      background: white;
+      border: 1px solid #e2e8f0;
+      transition: var(--wl-transition);
+      margin: 0 4px;
+    }
+    .custom-pagination .page-item.active .page-link {
+      background: var(--wl-primary);
+      color: white;
+      border-color: var(--wl-primary);
+      box-shadow: 0 8px 20px rgba(12, 110, 253, 0.25);
+    }
+    .custom-pagination .page-link:hover:not(.active) {
+      background: var(--wl-dark);
+      color: white;
+      border-color: var(--wl-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Grand CTA Banner */
+    .cta-grand-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      border-radius: 36px;
+      padding: 80px 48px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 35px 80px rgba(15, 23, 42, 0.25);
+    }
+    .cta-grand-banner::after {
+      content: '\f57d';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      font-size: 260px;
+      color: rgba(255, 255, 255, 0.03);
+      pointer-events: none;
+    }
+
+    /* Footer Styles */
+    .footer-section {
+      background: #0b1120;
+      color: white;
+    }
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: var(--wl-transition);
+    }
+    .footer-links a:hover {
+      color: var(--wl-accent);
+      padding-left: 6px;
+    }
+    .social-links a {
+      transition: var(--wl-transition);
+    }
+    .social-links a:hover {
+      background: var(--wl-primary) !important;
+      border-color: var(--wl-primary) !important;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-shield-halved text-success me-1"></i> Sovereign Audited Tier 1</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+              <li><a class="dropdown-item" href="#">GBP (&pound;)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar shadow-sm sticky-top bg-white py-3" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-1" href="index.html">
+        Wander<span class="text-primary">Luxe</span><span class="text-warning brand-dot">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active text-primary" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="#tours-filter-section" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-compass"></i> Explore Expeditions
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white fs-3 fw-bold" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house me-3 text-primary"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="destinations.html"><i class="fa-solid fa-earth-americas me-3 text-info"></i> Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white active text-primary" href="tours.html"><i class="fa-solid fa-suitcases me-3 text-warning"></i> Luxury Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html"><i class="fa-solid fa-gem me-3 text-danger"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html"><i class="fa-solid fa-images me-3 text-success"></i> Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html"><i class="fa-solid fa-book-open me-3 text-primary"></i> Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html"><i class="fa-solid fa-circle-question me-3 text-info"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i class="fa-solid fa-envelope me-3 text-warning"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section & Breadcrumb -->
+  <header class="tours-hero" id="hero-banner">
+    <div class="container position-relative z-2 text-center" data-aos="fade-up" data-aos-duration="1000">
+      
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <div class="breadcrumb-custom shadow-sm">
+          <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+          <span>/</span>
+          <span class="active">Curated Expeditions</span>
+        </div>
+      </nav>
+
+      <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider mb-3 d-inline-block shadow-sm">
+        <i class="fa-solid fa-crown me-1"></i> The 2026/2027 Sovereign Collection
+      </span>
+      <h1 class="display-3 fw-bolder text-white mb-4">Masterpiece Luxury Expeditions</h1>
+      <p class="lead text-light text-opacity-85 fs-4 fw-light max-w-3xl mx-auto mb-5">
+        Immerse in private jet circumnavigations, chartered superyacht soirées, and white-glove African safaris guided by world-renowned royal historians and naturalists.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-4 text-white text-opacity-90 small fw-semibold">
+        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-check-circle text-warning fs-5"></i> Private Aircraft Fleet Included</span>
+        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-check-circle text-info fs-5"></i> 24/7 Diplomatic Concierge</span>
+        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-check-circle text-success fs-5"></i> Michelin Private Chefs</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Advanced Filters & Search Bar -->
+  <section class="container pb-5" id="tours-filter-section">
+    <div class="advanced-filter-container" data-aos="fade-up" data-aos-delay="200">
+      
+      <!-- Top Search & Sort Row -->
+      <div class="row g-3 align-items-center mb-4 pb-3 border-bottom">
+        <div class="col-lg-5 col-md-6">
+          <div class="position-relative">
+            <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+            <input type="text" class="form-control form-control-luxe ps-5" id="searchInput" placeholder="Search by destination, wonder, or aircraft..." onkeyup="applyFilters()" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <select class="form-select form-select-luxe" id="priceSelect" onchange="applyFilters()">
+            <option value="all">All Budget Tiers</option>
+            <option value="under50k">Under $50,000 / guest</option>
+            <option value="50k-100k">$50,000 - $100,000 / guest</option>
+            <option value="over100k">$100,000+ / Sovereign Buyout</option>
+          </select>
+        </div>
+
+        <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-lg-end gap-3">
+          <label class="text-muted small fw-bold text-nowrap"><i class="fa-solid fa-arrow-down-short-wide me-1 text-primary"></i> Sort by:</label>
+          <select class="form-select form-select-luxe w-auto flex-grow-1" id="sortSelect" onchange="applyFilters()">
+            <option value="featured">Featured Allocation</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="duration">Duration: Longest First</option>
+            <option value="rating">Audited Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn filter-pill-btn active" data-filter="all" onclick="setCategoryFilter('all', this)">
+            <i class="fa-solid fa-layer-group me-1"></i> All Expeditions (<span id="pkgCount">6</span>)
+          </button>
+          <button class="btn filter-pill-btn" data-filter="jet" onclick="setCategoryFilter('jet', this)">
+            <i class="fa-solid fa-plane me-1 text-primary"></i> Private Jet Circumnavigations
+          </button>
+          <button class="btn filter-pill-btn" data-filter="yacht" onclick="setCategoryFilter('yacht', this)">
+            <i class="fa-solid fa-ship me-1 text-info"></i> Superyacht &amp; Regattas
+          </button>
+          <button class="btn filter-pill-btn" data-filter="safari" onclick="setCategoryFilter('safari', this)">
+            <i class="fa-solid fa-paw me-1 text-warning"></i> Royal Safari &amp; Frontiers
+          </button>
+          <button class="btn filter-pill-btn" data-filter="cultural" onclick="setCategoryFilter('cultural', this)">
+            <i class="fa-solid fa-landmark-dome me-1 text-success"></i> Imperial Cultural Buyouts
+          </button>
+        </div>
+
+        <button class="btn btn-link text-decoration-none text-muted small fw-bold" onclick="resetAllFilters()">
+          <i class="fa-solid fa-rotate-right me-1"></i> Reset Filters
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Tour Content -->
+  <main class="py-2 pb-5" id="tours-main-content">
+    <div class="container">
+
+      <!-- Featured Tours Masterpiece Showcase -->
+      <section class="mb-5 pb-4" data-aos="fade-up">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="badge bg-danger px-3 py-1 rounded-pill text-uppercase tracking-wider small fw-bold"><i class="fa-solid fa-bolt me-1"></i> Flagship Buyout Showcase</span>
+          <span class="text-muted small fw-semibold">Limited to 16 VIP Guests Globally</span>
+        </div>
+
+        <div class="featured-tour-card">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-7 position-relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1400&q=80" class="w-100 featured-tour-img" alt="Around the World Private Jet" />
+              <div class="position-absolute top-0 start-0 m-4 d-flex flex-column gap-2">
+                <span class="badge bg-primary px-3 py-2 rounded-pill fw-bold text-uppercase tracking-wider shadow"><i class="fa-solid fa-plane me-1"></i> Custom Boeing 757</span>
+              </div>
+              <div class="position-absolute bottom-0 start-0 m-4">
+                <span class="badge bg-dark bg-opacity-80 backdrop-blur text-white px-3 py-2 rounded-pill border border-light border-opacity-25">
+                  <i class="fa-solid fa-globe text-info me-1"></i> 8 World Wonders &bull; 5 Continents
+                </span>
+              </div>
+            </div>
+
+            <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="offer-badge-vip"><i class="fa-solid fa-gift me-1"></i> $15,000 Air Credit Included</span>
+                  <span class="rating-pill bg-warning bg-opacity-20 text-warning border-warning border-opacity-50 text-white">
+                    <i class="fa-solid fa-star"></i> 5.00 (92 Audits)
+                  </span>
+                </div>
+
+                <h2 class="display-6 fw-bold text-white mb-3">Around the World Private Jet Circumnavigation</h2>
+                <p class="text-light text-opacity-80 fw-normal mb-4 lh-lg">
+                  Board WanderLuxe's bespoke 52-seat Boeing 757 private aircraft for an epic 24-day voyage across Kyoto's bamboo groves, the Taj Mahal by moonlight, the Serengeti wildlife migration, and Easter Island monolithic sanctuaries.
+                </p>
+
+                <div class="row g-3 mb-4 py-3 border-top border-bottom border-light border-opacity-15">
+                  <div class="col-6">
+                    <span class="text-light text-opacity-60 small d-block">Charter Duration</span>
+                    <strong class="text-white fs-5"><i class="fa-regular fa-clock text-warning me-1"></i> 24 Days / 23 Nights</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-light text-opacity-60 small d-block">Sovereign Allocation</span>
+                    <strong class="text-white fs-5"><i class="fa-solid fa-user-shield text-success me-1"></i> All-Inclusive VIP</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-2">
+                <div>
+                  <span class="text-light text-opacity-60 small d-block">All-Inclusive Tariffs From</span>
+                  <div class="price-tag text-white fs-2 mb-0">$125,000 <small class="fs-6 fw-normal text-light text-opacity-70">/ guest</small></div>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-warning rounded-pill px-4 py-3 fw-bold text-dark shadow">
+                    View Master Itinerary <i class="fa-solid fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tour Cards Grid Title -->
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Curated Portfolio</span>
+          <h2 class="display-6 fw-bold mb-0">Expeditions &amp; Private Buyouts</h2>
+        </div>
+        <span class="text-muted fw-semibold small d-none d-sm-inline-block">Showing audited real-time charter availability</span>
+      </div>
+
+      <!-- Tour Grid -->
+      <div class="row g-4 mb-5" id="toursGrid">
+        
+        <!-- Card 1 (Jet) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="jet" data-price="125000" data-duration="24" data-rating="5.0" data-aos="fade-up">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="Around the World Private Jet" />
+              <span class="badge-category"><i class="fa-solid fa-plane me-1 text-primary"></i> Private Jet</span>
+              <span class="badge-offer-label">Flagship Buyout</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 24 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> Kyoto &bull; Taj Mahal &bull; Serengeti</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.0 (42 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">Around the World Private Jet Circumnavigation</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  Board our private Boeing 757 for an epic journey across 8 UNESCO monuments with dedicated historian guides and royal suite accommodations.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">All-Inclusive</span>
+                  <span class="price-tag">$125,000</span> <span class="price-sub">/ guest</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2 (Yacht) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="yacht" data-price="48000" data-duration="12" data-rating="4.98" data-aos="fade-up" data-aos-delay="100">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="Med Superyacht" />
+              <span class="badge-category"><i class="fa-solid fa-ship me-1 text-info"></i> Superyacht</span>
+              <span class="badge-offer-label bg-info text-white">VIP Cannes Perk</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 12 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> Monaco &bull; Capri &bull; Corsica</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.98 (60 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">Mediterranean Superyacht Grand Soirée</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  Chartered 60-meter Benetti superyacht voyage exploring secluded Amalfi coves, private Tuscan vineyards, and VIP red carpet film events.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">Charter Buyout</span>
+                  <span class="price-tag">$48,000</span> <span class="price-sub">/ guest</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3 (Safari) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="safari" data-price="36000" data-duration="14" data-rating="5.0" data-aos="fade-up" data-aos-delay="200">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="East Africa Safari" />
+              <span class="badge-category"><i class="fa-solid fa-paw me-1 text-warning"></i> Royal Safari</span>
+              <span class="badge-offer-label bg-success text-white">Helicopter Safari</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 14 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> Kenya &amp; Tanzania Reserves</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.0 (88 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">The Great Migration &amp; Ngorongoro Crater</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  Transit between Singita and &amp;Beyond ultra-luxury lodges via private executive Cessna. Witness the wildlife spectacle with NatGeo photographers.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">All-Inclusive</span>
+                  <span class="price-tag">$36,000</span> <span class="price-sub">/ guest</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4 (Cultural) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="cultural" data-price="85000" data-duration="18" data-rating="4.99" data-aos="fade-up">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="Ancient Wonders" />
+              <span class="badge-category"><i class="fa-solid fa-landmark-dome me-1 text-success"></i> Imperial Buyout</span>
+              <span class="badge-offer-label bg-danger text-white">After-Hours Access</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 18 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> Egypt &bull; Greece &bull; Japan</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.99 (55 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">Empires &amp; Dynasties VIP Cultural Odyssey</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  After-hours private access to the Pyramids of Giza, exclusive dinner inside the Acropolis museum, and private Kyoto samurai castle buyout.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">Private Jet Transit</span>
+                  <span class="price-tag">$85,000</span> <span class="price-sub">/ guest</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 5 (Yacht) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="yacht" data-price="55000" data-duration="10" data-rating="5.0" data-aos="fade-up" data-aos-delay="100">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="Caribbean Yacht" />
+              <span class="badge-category"><i class="fa-solid fa-ship me-1 text-info"></i> Catamaran Regatta</span>
+              <span class="badge-offer-label">Eco-Luxury Fleet</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 10 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> St. Barts &bull; Antigua &bull; Anguilla</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.0 (30 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">Caribbean Gems Private Catamaran Regatta</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  Sail the pristine waters of the Leeward Islands aboard a brand-new Sunreef 80 Eco luxury catamaran equipped with a Michelin-star private chef.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">All-Inclusive</span>
+                  <span class="price-tag">$55,000</span> <span class="price-sub">/ buyout</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 6 (Safari) -->
+        <div class="col-lg-4 col-md-6 tour-card-wrapper" data-category="safari" data-price="42000" data-duration="15" data-rating="4.97" data-aos="fade-up" data-aos-delay="200">
+          <article class="tour-card-ultra">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80" class="tour-card-img" alt="Patagonia Expedition" />
+              <span class="badge-category"><i class="fa-solid fa-mountain me-1 text-warning"></i> Polar Frontier</span>
+              <span class="badge-offer-label bg-dark text-white">Ice-Class Mega Yacht</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock text-warning me-1"></i> 15 Days</span>
+            </div>
+            
+            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-muted small fw-semibold"><i class="fa-solid fa-location-dot text-danger me-1"></i> Patagonia &amp; Antarctica Peninsula</span>
+                  <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.97 (48 Reviews)</span>
+                </div>
+                <h3 class="h5 fw-bold mb-3"><a href="tour-details.html" class="text-dark text-decoration-none">Patagonia &amp; Antarctica Helipad Frontier</a></h3>
+                <p class="text-muted small mb-4 lh-relaxed">
+                  Reside at Awasi Patagonia carbon-neutral lodges, take private helicopter glacier flights, and cross the Drake Passage via chartered ice-class mega yacht.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="price-sub d-block">Helicopter Transit</span>
+                  <span class="price-tag">$42,000</span> <span class="price-sub">/ guest</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="tour-details.html" class="btn btn-outline-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width:40px;height:40px;" title="Quick Inquiry" aria-label="Quick Inquiry"><i class="fa-regular fa-bookmark"></i></a>
+                  <a href="tour-details.html" class="btn btn-primary rounded-pill px-4 fw-semibold small">Itinerary</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Empty State Message -->
+      <div class="text-center py-5 d-none" id="noResultsMsg">
+        <div class="bg-white rounded-4 p-5 max-w-xl mx-auto shadow-sm border">
+          <i class="fa-solid fa-compass-drafting fs-1 text-muted mb-3"></i>
+          <h3 class="h4 fw-bold">No Matching Expeditions Found</h3>
+          <p class="text-muted small mb-4">We couldn't locate any pre-scheduled tours matching your specific criteria. However, our expedition architects can custom-build this itinerary for you.</p>
+          <button class="btn btn-primary rounded-pill px-4" onclick="resetAllFilters()">Reset Search Filters</button>
+        </div>
+      </div>
+
+      <!-- Advanced Pagination -->
+      <nav class="mt-5 pt-4 d-flex justify-content-center" aria-label="Tour Packages Pagination" id="tours-pagination" data-aos="fade-up">
+        <ul class="pagination pagination-lg custom-pagination gap-2 mb-0 align-items-center">
+          <li class="page-item disabled">
+            <a class="page-link shadow-sm" href="#" tabindex="-1" aria-disabled="true" aria-label="Previous"><i class="fa-solid fa-chevron-left small"></i></a>
+          </li>
+          <li class="page-item active"><a class="page-link shadow-sm" href="#">1</a></li>
+          <li class="page-item"><a class="page-link shadow-sm" href="#">2</a></li>
+          <li class="page-item"><a class="page-link shadow-sm" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link shadow-sm" href="#" aria-label="Next"><i class="fa-solid fa-chevron-right small"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Grand CTA Section -->
+  <section class="container my-5 py-3" id="cta-section">
+    <div class="cta-grand-banner" data-aos="zoom-in" data-aos-duration="900">
+      <div class="row align-items-center g-4 position-relative z-2">
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="badge bg-warning text-dark px-3 py-1 rounded-pill text-uppercase tracking-wider small fw-bold mb-3"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Bespoke Architectural Design</span>
+          <h2 class="display-5 fw-bold mb-3">Prefer a Completely Tailored White-Glove Itinerary?</h2>
+          <p class="lead text-light text-opacity-80 mb-0 max-w-2xl">
+            Our senior diplomatic directors can craft a 100% bespoke private jet, castle buyout, or superyacht itinerary from scratch within 48 hours.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 py-4 fw-bold shadow-lg fs-5 d-inline-flex align-items-center gap-2">
+            Request Bespoke Design <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ultra-Premium Footer -->
+  <footer class="footer-section pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 mb-3 d-block" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning brand-dot">.</span>
+          </a>
+          <p class="text-light text-opacity-70 mb-4 pe-lg-4 lh-lg small">
+            The world's premier sovereign luxury travel atelier. Curating transformative private jet circumnavigations, unlisted island buyouts, and superyacht diplomatic charters.
+          </p>
+          <div class="d-flex gap-2 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white font-serif-luxury tracking-wide">Sovereign Reserves</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="destinations.html">Santorini Caldera Reserve</a></li>
+            <li><a href="destinations.html">Baa Atoll Private Sanctuary</a></li>
+            <li><a href="destinations.html">Kyoto Imperial Shogun Estate</a></li>
+            <li><a href="destinations.html">St. Barthélemy Dolceriva Villa</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white font-serif-luxury tracking-wide">Atelier Navigation</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="about.html">Our Heritage &amp; Protocol</a></li>
+            <li><a href="tours.html">Expedition Portfolio</a></li>
+            <li><a href="gallery.html">Visual Masterpieces</a></li>
+            <li><a href="blog.html">Diplomatic Journal</a></li>
+            <li><a href="faq.html">Audited Confidential FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-4 text-white font-serif-luxury tracking-wide">VIP Private Dispatch</h5>
+          <p class="text-light text-opacity-70 mb-3 small">Available 24/7/365 via encrypted satellite link for sovereign members.</p>
+          <div class="bg-dark bg-opacity-50 p-3 rounded-4 border border-secondary border-opacity-25 d-flex align-items-center mb-3">
+            <i class="fa-solid fa-phone-volume fs-3 text-warning me-3"></i>
+            <div>
+              <span class="small text-light text-opacity-60 d-block text-uppercase fw-bold" style="font-size:0.7rem;">Direct Global Satellite Line</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none tracking-tight">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+          <span class="small text-success d-flex align-items-center gap-1"><i class="fa-solid fa-circle text-success" style="font-size:0.5rem;"></i> Immediate Tarmac Ground Response Active</span>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Sovereign Atelier Inc. Audited &amp; Bonded.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none hover-white">Diplomatic Privacy Protocol</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none hover-white">Terms of Charter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Advanced Filtering & Sorting Logic -->
+  <script>
+    let activeCategory = 'all';
+
+    function setCategoryFilter(category, btnElem) {
+      activeCategory = category;
+      const pills = document.querySelectorAll('.filter-pill-btn');
+      pills.forEach(p => p.classList.remove('active'));
+      if (btnElem) btnElem.classList.add('active');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+      const priceVal = document.getElementById('priceSelect').value;
+      const sortVal = document.getElementById('sortSelect').value;
+      const cards = Array.from(document.querySelectorAll('.tour-card-wrapper'));
+      const grid = document.getElementById('toursGrid');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      const pkgCountElem = document.getElementById('pkgCount');
+
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const price = Number(card.getAttribute('data-price'));
+        const textContent = card.textContent.toLowerCase();
+
+        // Category match
+        const matchesCat = (activeCategory === 'all' || cat === activeCategory);
+
+        // Search match
+        const matchesSearch = (!searchVal || textContent.includes(searchVal));
+
+        // Price match
+        let matchesPrice = true;
+        if (priceVal === 'under50k') matchesPrice = (price < 50000);
+        else if (priceVal === '50k-100k') matchesPrice = (price >= 50000 && price <= 100000);
+        else if (priceVal === 'over100k') matchesPrice = (price > 100000);
+
+        if (matchesCat && matchesSearch && matchesPrice) {
+          card.classList.remove('d-none');
+          visibleCount++;
+        } else {
+          card.classList.add('d-none');
+        }
+      });
+
+      // Update package count
+      if (pkgCountElem) pkgCountElem.textContent = visibleCount;
+
+      // Handle empty state
+      if (visibleCount === 0) {
+        noResultsMsg.classList.remove('d-none');
+      } else {
+        noResultsMsg.classList.add('d-none');
+      }
+
+      // Sort visible items
+      const visibleCards = cards.filter(c => !c.classList.contains('d-none'));
+      if (sortVal === 'price-asc') {
+        visibleCards.sort((a, b) => Number(a.getAttribute('data-price')) - Number(b.getAttribute('data-price')));
+      } else if (sortVal === 'price-desc') {
+        visibleCards.sort((a, b) => Number(b.getAttribute('data-price')) - Number(a.getAttribute('data-price')));
+      } else if (sortVal === 'duration') {
+        visibleCards.sort((a, b) => Number(b.getAttribute('data-duration')) - Number(a.getAttribute('data-duration')));
+      } else if (sortVal === 'rating') {
+        visibleCards.sort((a, b) => Number(b.getAttribute('data-rating')) - Number(a.getAttribute('data-rating')));
+      }
+
+      visibleCards.forEach(c => grid.appendChild(c));
+    }
+
+    function resetAllFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('priceSelect').value = 'all';
+      document.getElementById('sortSelect').value = 'featured';
+      const firstPill = document.querySelector('.filter-pill-btn[data-filter="all"]');
+      setCategoryFilter('all', firstPill);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ once: true, duration: 800 });
+      }
+    });
+  </script>
+</body>
+</html>

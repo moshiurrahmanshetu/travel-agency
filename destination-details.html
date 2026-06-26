@@ -1,0 +1,1345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santorini Caldera Diplomatic Reserve - WanderLuxe Sovereign Atelier</title>
+  <meta name="description" content="Explore the Santorini Caldera Diplomatic Reserve. Unlisted cliffside villas, private Sikorsky helipad arrivals, Michelin sommelier cellars, and exclusive Riva yacht cruising." />
+  
+  <!-- Google Fonts (Inter, Outfit & Playfair Display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper JS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- ThemeForest Ultra-Premium Quality Styles -->
+  <style>
+    :root {
+      --wl-primary: #0C6EFD;
+      --wl-secondary: #00BFA6;
+      --wl-accent: #FFB703;
+      --wl-dark: #0f172a;
+      --wl-slate: #1e293b;
+      --wl-light-bg: #f8fafc;
+      --wl-border: rgba(15, 23, 42, 0.08);
+      --wl-gold: #d4af37;
+      --wl-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #334155;
+      background-color: var(--wl-light-bg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.025em;
+      color: var(--wl-dark);
+    }
+
+    .font-serif-luxury {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* 1. Hero & 2. Breadcrumb */
+    .dest-detail-hero {
+      position: relative;
+      height: 75vh;
+      min-height: 580px;
+      background: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(15,23,42,0.85) 100%), url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      color: white;
+    }
+    
+    .breadcrumb-custom {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 10px 24px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.22);
+      margin-bottom: 24px;
+    }
+    .breadcrumb-custom a {
+      color: var(--wl-accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--wl-transition);
+    }
+    .breadcrumb-custom a:hover { color: white; }
+    .breadcrumb-custom span { color: rgba(255,255,255,0.6); margin: 0 10px; font-size: 0.85rem; }
+    .breadcrumb-custom .active { color: white; font-weight: 600; font-size: 0.92rem; }
+
+    /* 3. Gallery Slider */
+    .swiper-gallery-main {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(15,23,42,0.12);
+      height: 480px;
+      border: 1px solid var(--wl-border);
+    }
+    .swiper-gallery-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-gallery-thumbs {
+      height: 110px;
+      box-sizing: border-box;
+      padding: 14px 0;
+    }
+    .swiper-gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.45;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--wl-transition);
+      border: 2px solid transparent;
+    }
+    .swiper-gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+      border-color: var(--wl-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(12, 110, 253, 0.2);
+    }
+    .swiper-gallery-thumbs img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(15,23,42,0.8);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 10;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* Section Cards & Bento Grid */
+    .detail-card-box {
+      background: white;
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(15,23,42,0.03);
+      border: 1px solid var(--wl-border);
+      margin-bottom: 40px;
+    }
+
+    .amenity-pill {
+      background: #f1f5f9;
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 600;
+      color: var(--wl-dark);
+      transition: var(--wl-transition);
+      border: 1px solid transparent;
+    }
+    .amenity-pill:hover {
+      background: white;
+      border-color: var(--wl-primary);
+      box-shadow: 0 8px 25px rgba(12,110,253,0.08);
+      transform: translateY(-2px);
+    }
+    .amenity-pill i {
+      font-size: 1.4rem;
+      color: var(--wl-primary);
+    }
+
+    /* Bento Highlights */
+    .bento-highlight {
+      background: #f8fafc;
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid #e2e8f0;
+      height: 100%;
+      transition: var(--wl-transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .bento-highlight:hover {
+      background: white;
+      border-color: var(--wl-secondary);
+      box-shadow: 0 15px 35px rgba(0,191,166,0.1);
+      transform: translateY(-5px);
+    }
+    .bento-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    /* Travel Info Grid */
+    .info-spec-item {
+      padding: 20px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+    }
+    .info-spec-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .info-spec-val {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--wl-dark);
+    }
+
+    /* Weather Widget Card */
+    .weather-widget-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.2);
+    }
+    .weather-widget-card::after {
+      content: '\f6c4';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: -30px;
+      bottom: -40px;
+      font-size: 180px;
+      color: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+    .weather-stat-box {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    /* Best Time To Visit Timeline */
+    .season-card {
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      background: white;
+      transition: var(--wl-transition);
+      height: 100%;
+    }
+    .season-card.prime {
+      border-color: var(--wl-primary);
+      background: rgba(12,110,253,0.03);
+      box-shadow: 0 12px 30px rgba(12,110,253,0.08);
+    }
+    .season-card:hover { transform: translateY(-4px); }
+
+    /* Attractions Cards */
+    .attraction-card {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--wl-border);
+      background: white;
+      transition: var(--wl-transition);
+    }
+    .attraction-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(15,23,42,0.1);
+    }
+    .attraction-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* Nearby Tours Carousel */
+    .tour-mini-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--wl-border);
+      transition: var(--wl-transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .tour-mini-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15,23,42,0.12);
+      border-color: var(--wl-primary);
+    }
+    .tour-mini-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* Photo Gallery Lightbox Style */
+    .gallery-grid-item {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      height: 260px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+    }
+    .gallery-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-grid-item:hover img { transform: scale(1.12); }
+    .gallery-hover-icon {
+      position: absolute;
+      inset: 0;
+      background: rgba(15,23,42,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      opacity: 0;
+      transition: var(--wl-transition);
+      backdrop-filter: blur(4px);
+    }
+    .gallery-grid-item:hover .gallery-hover-icon { opacity: 1; }
+
+    /* Sticky Booking Sidebar */
+    .sticky-booking-widget {
+      background: white;
+      border-radius: 32px;
+      padding: 36px;
+      box-shadow: 0 25px 70px rgba(15,23,42,0.14);
+      border: 2px solid rgba(12,110,253,0.15);
+      position: sticky;
+      top: 110px;
+      z-index: 20;
+    }
+    .form-control-vip, .form-select-vip {
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      background-color: #f8fafc;
+      color: var(--wl-dark);
+      transition: var(--wl-transition);
+    }
+    .form-control-vip:focus, .form-select-vip:focus {
+      background-color: white;
+      border-color: var(--wl-primary);
+      box-shadow: 0 0 0 4px rgba(12,110,253,0.12);
+    }
+
+    /* Accordion Custom */
+    .accordion-custom-vip .accordion-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 18px !important;
+      margin-bottom: 16px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 15px rgba(15,23,42,0.02);
+    }
+    .accordion-custom-vip .accordion-button {
+      padding: 22px 26px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--wl-dark);
+      background: white;
+      box-shadow: none;
+    }
+    .accordion-custom-vip .accordion-button:not(.collapsed) {
+      color: var(--wl-primary);
+      background: #f8fafc;
+    }
+    .accordion-custom-vip .accordion-body {
+      padding: 24px 26px;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Booking CTA Banner */
+    .cta-grand-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      border-radius: 36px;
+      padding: 80px 48px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 35px 80px rgba(15,23,42,0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-location-dot me-1"></i> New York &bull; London &bull; Tokyo &bull; Dubai</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+              <li><a class="dropdown-item" href="#">GBP (&pound;)</a></li>
+            </ul>
+          </div>
+          <span class="top-divider">|</span>
+          <div class="social-top ms-2 d-inline-flex gap-2">
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar shadow-sm sticky-top bg-white" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand fs-3 fw-bold" href="index.html">
+        Wander<span class="text-primary">Luxe</span><span class="brand-dot text-warning">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active text-primary" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tours.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-compass"></i> Book Your Trip
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white fs-3 fw-bold" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house me-3 text-primary"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white active text-primary" href="destinations.html"><i class="fa-solid fa-earth-americas me-3 text-info"></i> Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tours.html"><i class="fa-solid fa-suitcases me-3 text-warning"></i> Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html"><i class="fa-solid fa-gem me-3 text-danger"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html"><i class="fa-solid fa-images me-3 text-success"></i> Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html"><i class="fa-solid fa-book-open me-3 text-primary"></i> Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html"><i class="fa-solid fa-circle-question me-3 text-info"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i class="fa-solid fa-envelope me-3 text-warning"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1. Hero & 2. Breadcrumb -->
+  <header class="dest-detail-hero" id="hero-banner">
+    <div class="container position-relative z-2" data-aos="fade-up" data-aos-duration="1000">
+      
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <div class="breadcrumb-custom shadow-sm">
+          <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+          <span>/</span>
+          <a href="destinations.html">Destinations</a>
+          <span>/</span>
+          <span class="active">Santorini Caldera Reserve</span>
+        </div>
+      </nav>
+
+      <div class="row align-items-end">
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase"><i class="fa-solid fa-crown me-1"></i> Sovereign Portfolio #01</span>
+            <span class="badge bg-primary px-3 py-2 rounded-pill fw-semibold"><i class="fa-solid fa-location-dot me-1"></i> Oia &bull; Cyclades, Greece</span>
+            <span class="badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill text-white"><i class="fa-solid fa-shield-halved text-success me-1"></i> Audited Security Tier 1</span>
+          </div>
+          <h1 class="display-3 fw-bolder text-white mb-3">Santorini Caldera Diplomatic Reserve</h1>
+          <p class="lead text-light text-opacity-85 fs-4 fw-light max-w-3xl">
+            Unlisted cliffside estate buyout featuring 12 private volcanic infinity suites, dedicated Sikorsky S-76 helipad arrivals, and subterranean Assyrtiko wine vaults.
+          </p>
+        </div>
+        <div class="col-lg-4 pb-2 text-lg-end">
+          <div class="bg-dark bg-opacity-60 backdrop-blur p-4 rounded-4 border border-light border-opacity-15 d-inline-block text-start">
+            <span class="text-warning fw-bold fs-5 d-block mb-1"><i class="fa-solid fa-star"></i> 4.99 / 5.00</span>
+            <span class="text-white text-opacity-80 small d-block mb-2">Based on 142 Audited VIP Client Charters</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-success bg-opacity-25 text-success border border-success px-2 py-1 small">Verified Buyout</span>
+              <span class="text-white text-opacity-60 small">&bull; Immediate 2026 Confirmation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout (8 Col Details + 4 Col Sticky Booking) -->
+  <main class="py-5" id="main-content">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- LEFT COLUMN (Details & Showcases) -->
+        <div class="col-lg-8">
+
+          <!-- 3. Gallery Slider (Swiper Main + Thumbs) -->
+          <section class="mb-5" id="gallery-slider-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h4 fw-bold mb-0"><i class="fa-solid fa-images text-primary me-2"></i> Visual Masterpiece Showcase</h2>
+              <span class="text-muted small fw-semibold"><i class="fa-solid fa-camera me-1"></i> 12 High-Res Perspectives</span>
+            </div>
+            
+            <!-- Main Swiper -->
+            <div class="swiper swiper-gallery-main position-relative mb-2" id="mainGallerySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide position-relative">
+                  <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=80" alt="Diplomatic Reserve Cliffside View" />
+                  <div class="gallery-badge"><i class="fa-solid fa-eye me-1 text-warning"></i> Master Caldera Suite Veranda</div>
+                </div>
+                <div class="swiper-slide position-relative">
+                  <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80" alt="Heated Volcanic Plunge Pool" />
+                  <div class="gallery-badge"><i class="fa-solid fa-water me-1 text-info"></i> Heated Volcanic Infinity Plunge Pool</div>
+                </div>
+                <div class="swiper-slide position-relative">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80" alt="Minimalist Cycladic Interior" />
+                  <div class="gallery-badge"><i class="fa-solid fa-couch me-1 text-primary"></i> Subterranean Living Atelier Salon</div>
+                </div>
+                <div class="swiper-slide position-relative">
+                  <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=80" alt="Riva Yacht Sunset Charter" />
+                  <div class="gallery-badge"><i class="fa-solid fa-ship me-1 text-warning"></i> Private Riva 68' Dolceriva Sunset Charter</div>
+                </div>
+              </div>
+              <div class="swiper-button-next text-white drop-shadow"></div>
+              <div class="swiper-button-prev text-white drop-shadow"></div>
+            </div>
+
+            <!-- Thumbs Swiper -->
+            <div class="swiper swiper-gallery-thumbs" id="thumbGallerySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=400&q=80" alt="Thumb 1" /></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400&q=80" alt="Thumb 2" /></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&q=80" alt="Thumb 3" /></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=400&q=80" alt="Thumb 4" /></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. Overview -->
+          <section class="detail-card-box" id="overview-section" data-aos="fade-up">
+            <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Architectural &amp; Sovereign Integrity</span>
+            <h2 class="display-6 fw-bold mb-4">The Atelier Experience &amp; Estate Overview</h2>
+            
+            <p class="lead text-dark fw-normal mb-4 lh-base">
+              Carved 300 meters directly into the crimson and jet-black volcanic cliff face of Oia, the **Santorini Caldera Diplomatic Reserve** stands as WanderLuxe's flagship European buyout sanctuary. Offering an audited, completely confidential perimeter, the estate guarantees absolute seclusion from public footpaths while commanding an unobstructed 180-degree sweep of the Aegean Caldera.
+            </p>
+
+            <p class="text-muted mb-4 lh-lg">
+              Designed by visionary Hellenic conservation architects, the compound seamlessly marries 17th-century Cycladic monastic architecture with invisible Tier-1 smart home automation. The whitewashed lime plaster walls regulate internal climate naturally, while custom bronzed acoustic glass doors open onto cantilevered basalt terraces. Every villa suite is equipped with its own heated thalassotherapy cave plunge pool, stocked Assyrtiko wine humidor, and biometric privacy locks.
+            </p>
+
+            <!-- Key Amenities Bar -->
+            <h3 class="h6 fw-bold text-uppercase text-muted tracking-wider mb-3 pt-2">Estate Sovereign Inclusions</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-sm-6">
+                <div class="amenity-pill"><i class="fa-solid fa-user-shield"></i> Biometric Confidentiality Access</div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="amenity-pill"><i class="fa-solid fa-helicopter"></i> Dedicated Sikorsky Helipad Rights</div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="amenity-pill"><i class="fa-solid fa-bell-concierge"></i> 24/7 Royal Butler Dispatch</div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="amenity-pill"><i class="fa-solid fa-anchor"></i> Deepwater Superyacht Mooring</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Highlights Bento Grid -->
+          <section class="mb-5" id="highlights-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+              <div>
+                <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">Curated Privileges</span>
+                <h2 class="display-6 fw-bold mb-0">Exclusive Reserve Highlights</h2>
+              </div>
+              <span class="badge bg-dark px-3 py-2 rounded-pill"><i class="fa-solid fa-gem text-warning me-1"></i> All-Inclusive Charter</span>
+            </div>
+
+            <div class="row g-4">
+              <!-- Bento 1 -->
+              <div class="col-md-6">
+                <div class="bento-highlight">
+                  <div class="bento-icon bg-primary bg-opacity-10 text-primary"><i class="fa-solid fa-ship"></i></div>
+                  <h3 class="h5 fw-bold mb-2">Private Riva Yacht Fleet</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    Unlimited daily access to our dedicated 68-foot Riva Dolceriva motor yacht. Explore hidden sulfur hot springs, secluded White Beach coves, and enjoy catered sunset caviar service on the open water.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bento 2 -->
+              <div class="col-md-6">
+                <div class="bento-highlight">
+                  <div class="bento-icon bg-warning bg-opacity-15 text-dark"><i class="fa-solid fa-helicopter"></i></div>
+                  <h3 class="h5 fw-bold mb-2">Twin-Engine Helipad Transit</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    Bypass ferry queues and airport delays. Your booking includes direct 35-minute executive helicopter transfers from Athens (ATH) or Mykonos (JMK) directly to our private cliffside landing pad.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bento 3 -->
+              <div class="col-md-6">
+                <div class="bento-highlight">
+                  <div class="bento-icon bg-success bg-opacity-10 text-success"><i class="fa-solid fa-wine-glass-empty"></i></div>
+                  <h3 class="h5 fw-bold mb-2">Subterranean Sommelier Vault</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    Descend into our 300-year-old volcanic ash cavern housing over 4,000 rare Aegean vintages. Includes private nightly degustations led by our Master Sommelier pairing grand cru Assyrtiko and Vinsanto.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bento 4 -->
+              <div class="col-md-6">
+                <div class="bento-highlight">
+                  <div class="bento-icon bg-info bg-opacity-10 text-info"><i class="fa-solid fa-utensils"></i></div>
+                  <h3 class="h5 fw-bold mb-2">Michelin Private Brigade</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    A dedicated culinary brigade of 4 private chefs stands at your disposal 24 hours a day. Sourcing daily catch from private fishing kaikis and organic herbs from our cliffside hydroponic gardens.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. Travel Information Specs -->
+          <section class="detail-card-box" id="travel-info-section" data-aos="fade-up">
+            <h2 class="h4 fw-bold mb-4"><i class="fa-solid fa-compass text-info me-2"></i> Vital Sovereign Travel Information</h2>
+            
+            <div class="row g-3">
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-clock me-1"></i> Local Timezone</div>
+                  <div class="info-spec-val">EEST (UTC +3)</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-money-bill-transfer me-1"></i> Primary Currency</div>
+                  <div class="info-spec-val">Euro (&euro;) &bull; All Cards</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-passport me-1"></i> Customs &amp; Entry</div>
+                  <div class="info-spec-val">Schengen / VIP Tarmac</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-plane-arrival me-1"></i> Primary Aviation</div>
+                  <div class="info-spec-val">Santorini (JTR) / Helipad</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-language me-1"></i> Atelier Languages</div>
+                  <div class="info-spec-val">English, Greek, French</div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="info-spec-item">
+                  <div class="info-spec-label"><i class="fa-solid fa-plug me-1"></i> Power Voltage</div>
+                  <div class="info-spec-val">230V / Type C &amp; F</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. Weather & Climate Live Widget -->
+          <section class="mb-5" id="weather-section" data-aos="fade-up">
+            <div class="weather-widget-card">
+              <div class="row align-items-center position-relative z-2">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                  <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold text-uppercase mb-2">Live Meteorological Auditing</span>
+                  <h2 class="display-5 fw-bold text-white mb-2">28&deg;C <span class="fs-4 fw-light text-light text-opacity-75">/ 82&deg;F</span></h2>
+                  <p class="lead text-light text-opacity-90 mb-3">Sublime Aegean Sunshine &bull; Gentle North Etesian Breeze</p>
+                  <p class="small text-light text-opacity-75 mb-0 max-w-lg">
+                    Santorini enjoys over 300 days of unblemished Mediterranean sunshine annually. The cliffside elevation of Oia creates a natural refreshing microclimate even during peak mid-summer afternoons.
+                  </p>
+                </div>
+                
+                <div class="col-lg-5">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <div class="weather-stat-box">
+                        <i class="fa-solid fa-sun text-warning fs-3 mb-1"></i>
+                        <span class="d-block small text-light text-opacity-75">UV Index</span>
+                        <strong class="fs-5 text-white">8 (Very High)</strong>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="weather-stat-box">
+                        <i class="fa-solid fa-water text-info fs-3 mb-1"></i>
+                        <span class="d-block small text-light text-opacity-75">Sea Temp</span>
+                        <strong class="fs-5 text-white">25&deg;C / 77&deg;F</strong>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="weather-stat-box">
+                        <i class="fa-solid fa-wind text-light fs-3 mb-1"></i>
+                        <span class="d-block small text-light text-opacity-75">Wind Speed</span>
+                        <strong class="fs-5 text-white">14 knots NW</strong>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="weather-stat-box">
+                        <i class="fa-solid fa-droplet text-primary fs-3 mb-1"></i>
+                        <span class="d-block small text-light text-opacity-75">Humidity</span>
+                        <strong class="fs-5 text-white">42% Crisp</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8. Best Time To Visit Guide -->
+          <section class="detail-card-box" id="best-time-section" data-aos="fade-up">
+            <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">Seasonality Curation</span>
+            <h2 class="h3 fw-bold mb-4">Best Time To Visit &amp; Charter Schedule</h2>
+            
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="season-card prime">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-primary px-3 py-1 rounded-pill small">Prime Serenity</span>
+                    <i class="fa-solid fa-leaf text-success"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-2">May &amp; September</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    The connoisseur's choice. Enjoy crystal-clear skies, perfectly warmed Aegean waters, and absolute peacefulness in Oia before and after peak yachting weeks.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="season-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-dark px-3 py-1 rounded-pill small text-white">High Sovereign</span>
+                    <i class="fa-solid fa-sun text-warning"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-2">June to August</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    Peak energy. Ideal for superyacht socializing, vibrant beach club buyouts, and warm midnight swimming under the starry Cycladic moon.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="season-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-secondary px-3 py-1 rounded-pill small text-white">Confidential</span>
+                    <i class="fa-solid fa-wine-bottle text-danger"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-2">October &amp; April</h3>
+                  <p class="text-muted small mb-0 lh-base">
+                    Mild hiking climate and exclusive grape harvesting season. Private estate rates carry preferential designer privileges during these tranquil months.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. Map -->
+          <section class="mb-5" id="map-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h4 fw-bold mb-0"><i class="fa-solid fa-map-location-dot text-danger me-2"></i> Confidential Seclusion Perimeter Map</h2>
+              <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill small"><i class="fa-solid fa-lock me-1"></i> Guarded Access Road</span>
+            </div>
+            <p class="text-muted small mb-3">
+              Positioned on the secluded northernmost volcanic bluff of Oia. Accessed exclusively via a gated private security checkpoint, ensuring zero pedestrian encroachment.
+            </p>
+            <div class="rounded-4 overflow-hidden shadow-sm border border-secondary border-opacity-25" style="height: 420px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25514.821193322198!2d25.362678685038316!3d36.46180374158485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499cc830248cbf9%3A0xb36605a069df9133!2sOia%20847%2002%2C%20Greece!5e0!3m2!1sen!2sus!4v1711200000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </section>
+
+          <!-- 10. Popular Attractions -->
+          <section class="detail-card-box" id="attractions-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Surrounding Wonders</span>
+                <h2 class="h3 fw-bold mb-0">Popular Attractions &amp; VIP Access</h2>
+              </div>
+              <span class="text-muted small"><i class="fa-solid fa-car me-1"></i> Chauffeur Fleet Included</span>
+            </div>
+
+            <div class="row g-4">
+              <!-- Attr 1 -->
+              <div class="col-md-6">
+                <div class="attraction-card h-100 d-flex flex-column">
+                  <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80" class="attraction-img" alt="Amoudi Bay Harbor" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-light text-dark fw-bold small">3 mins descent</span>
+                      <span class="text-primary fw-bold small">Private Launch Berth</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Amoudi Bay Royal Harbor</h3>
+                    <p class="text-muted small mb-0 flex-grow-1 lh-base">
+                      Famous crimson cliff fishing harbor directly below our estate. Our private tender awaits at Berth 4 for instant Riva catamaran boardings and fresh lobster dining.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Attr 2 -->
+              <div class="col-md-6">
+                <div class="attraction-card h-100 d-flex flex-column">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" class="attraction-img" alt="Akrotiri Excavations" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-light text-dark fw-bold small">25 mins chauffeured</span>
+                      <span class="text-warning fw-bold small">After-Hours Curator Tour</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Akrotiri Minoan Citadel</h3>
+                    <p class="text-muted small mb-0 flex-grow-1 lh-base">
+                      The "Pompeii of the Aegean." WanderLuxe arranges confidential after-hours archaeological walkthroughs with the Chief Curator, exploring 3,600-year-old frescoes in total solitude.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Attr 3 -->
+              <div class="col-md-6">
+                <div class="attraction-card h-100 d-flex flex-column">
+                  <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" class="attraction-img" alt="Skaros Rock Fortress" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-light text-dark fw-bold small">15 mins chauffeured</span>
+                      <span class="text-info fw-bold small">Guided Sunset Trek</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Skaros Rock Fortress Rim</h3>
+                    <p class="text-muted small mb-0 flex-grow-1 lh-base">
+                      Majestic medieval Venetian promontory jutting into the caldera basin. Accompanied by our private alpine fitness guide with catered champagne summit refreshments.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Attr 4 -->
+              <div class="col-md-6">
+                <div class="attraction-card h-100 d-flex flex-column">
+                  <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" class="attraction-img" alt="Pyrgos Medieval Village" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-light text-dark fw-bold small">20 mins chauffeured</span>
+                      <span class="text-success fw-bold small">Monastery Degustation</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Pyrgos Kallistis Hilltop</h3>
+                    <p class="text-muted small mb-0 flex-grow-1 lh-base">
+                      The highest medieval fortress settlement on Santorini. Wander the labyrinthine marble alleys and enjoy confidential dining at Prophet Elias monastery overlook.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 11. Nearby Tours (Related Packages) -->
+          <section class="mb-5" id="nearby-tours-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+              <div>
+                <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">Seamless Extensions</span>
+                <h2 class="h3 fw-bold mb-0">Nearby Tours &amp; Combined Expeditions</h2>
+              </div>
+              <a href="tours.html" class="text-primary text-decoration-none fw-bold small">View All Catalog <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="row g-4">
+              <!-- Tour 1 -->
+              <div class="col-md-6">
+                <div class="tour-mini-card">
+                  <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80" class="tour-mini-img" alt="Cyclades Superyacht Odyssey" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-primary bg-opacity-10 text-primary fw-bold small">7 Days / 6 Nights</span>
+                      <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 5.00</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2 text-dark">Cyclades Mega-Yacht Odyssey</h3>
+                    <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                      Depart directly from our Santorini harbor mooring on a 150-foot custom Benetti superyacht. Circumnavigate Mykonos, Paros, and secluded Polyaigos emerald bays.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                      <span class="fw-bold text-dark fs-5">$14,500 <small class="text-muted fw-normal fs-6">/ guest</small></span>
+                      <a href="tour-details.html" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-2 fw-bold">Explore Tour</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tour 2 -->
+              <div class="col-md-6">
+                <div class="tour-mini-card">
+                  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" class="tour-mini-img" alt="Athenian Riviera Heli-Tour" />
+                  <div class="p-4 d-flex flex-column flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-warning bg-opacity-15 text-dark fw-bold small">4 Days / 3 Nights</span>
+                      <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2 text-dark">Athenian Riviera Heli-Tour</h3>
+                    <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                      Board our Sikorsky helicopter from Oia cliff face directly to Cape Sounion and Astir Palace. Private Acropolis Parthenon walkthrough with former Minister of Culture.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                      <span class="fw-bold text-dark fs-5">$8,200 <small class="text-muted fw-normal fs-6">/ guest</small></span>
+                      <a href="tour-details.html" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-2 fw-bold">Explore Tour</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 12. Photo Gallery Grid -->
+          <section class="detail-card-box" id="photo-gallery-section" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Visual Anthology</span>
+                <h2 class="h3 fw-bold mb-0">Curated Photo Gallery</h2>
+              </div>
+              <span class="badge bg-light text-dark border px-3 py-2 rounded-pill small">Unretouched Client Capture</span>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="gallery-grid-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="setModalImage('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=80', 'Cliffside Infinity Veranda')">
+                  <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Gallery 1" />
+                  <div class="gallery-hover-icon"><i class="fa-solid fa-expand"></i></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="gallery-grid-item" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="setModalImage('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80', 'Subterranean Plunge Pool')">
+                  <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Gallery 2" />
+                  <div class="gallery-hover-icon"><i class="fa-solid fa-expand"></i></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="gallery-grid-item" style="height: 200px;" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="setModalImage('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80', 'Minimalist Whitewashed Suite')">
+                  <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" />
+                  <div class="gallery-hover-icon"><i class="fa-solid fa-expand"></i></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="gallery-grid-item" style="height: 200px;" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="setModalImage('https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1600&q=80', 'Dolceriva Catamaran Cruising')">
+                  <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" />
+                  <div class="gallery-hover-icon"><i class="fa-solid fa-expand"></i></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="gallery-grid-item" style="height: 200px;" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="setModalImage('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=80', 'Subterranean Assyrtiko Humidor')">
+                  <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Gallery 5" />
+                  <div class="gallery-hover-icon"><i class="fa-solid fa-expand"></i></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 13. Travel Tips Accordion -->
+          <section class="mb-5" id="travel-tips-section" data-aos="fade-up">
+            <span class="text-uppercase text-info fw-bold tracking-wider small d-block mb-1">Connoisseur Etiquette</span>
+            <h2 class="h3 fw-bold mb-4">VIP Atelier Travel Tips &amp; Protocols</h2>
+            
+            <div class="accordion accordion-custom-vip" id="tipsAccordionVip">
+              <!-- Tip 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vipTip1">
+                    <i class="fa-solid fa-shield-halved me-3 text-primary"></i> Confidentiality &amp; Drone Regulations
+                  </button>
+                </h3>
+                <div id="vipTip1" class="accordion-collapse collapse show" data-bs-parent="#tipsAccordionVip">
+                  <div class="accordion-body">
+                    To maintain absolute privacy for sovereign royalty and high-profile diplomatic guests, unauthorized drone flights over the Caldera rim reserve are strictly restricted by Hellenic Civil Aviation. Our private security staff utilizes anti-drone RF auditing. If you wish to capture aerial footage, your dedicated butler will arrange an audited flight window with our licensed in-house cinematographer.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tip 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vipTip2">
+                    <i class="fa-solid fa-shirt me-3 text-warning"></i> Bespoke Wardrobe &amp; Cobbler Advice
+                  </button>
+                </h3>
+                <div id="vipTip2" class="accordion-collapse collapse" data-bs-parent="#tipsAccordionVip">
+                  <div class="accordion-body">
+                    While the estate pathways are lined in smooth tumbled Thassos marble, excursions into Oia's historic cliffside alleys involve steep cobblestone steps. We recommend bespoke leather driving loafers or rubber-soled deck shoes for daytime cruising. For evening veranda degustations, a tailored linen jacket or light cashmere pashmina shields comfortably against refreshing evening Aegean trade winds.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tip 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vipTip3">
+                    <i class="fa-solid fa-jet-fighter me-3 text-success"></i> Tarmac Meet-and-Greet Protocols
+                  </button>
+                </h3>
+                <div id="vipTip3" class="accordion-collapse collapse" data-bs-parent="#tipsAccordionVip">
+                  <div class="accordion-body">
+                    Whether arriving via private Gulfstream jet at Santorini (JTR) general aviation terminal or connecting through Athens International (ATH), our tarmac dispatch team handles all luggage transfer directly from cargo hold to your waiting Sikorsky helicopter. Guests bypass terminal baggage carousels entirely.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tip 4 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vipTip4">
+                    <i class="fa-solid fa-wine-bottle me-3 text-danger"></i> Culinary Preferences &amp; Dietary Auditing
+                  </button>
+                </h3>
+                <div id="vipTip4" class="accordion-collapse collapse" data-bs-parent="#tipsAccordionVip">
+                  <div class="accordion-body">
+                    Upon booking confirmation, your executive chef conducts a confidential pre-arrival consultation regarding organic ingredient preferences, vintage wine vintages, and dietary restrictions. All seafood is sustainably harvested daily by our private fishing kaiki fleet from unpolluted deepwater marine reserves.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <!-- END LEFT COLUMN -->
+
+        <!-- RIGHT COLUMN (Sticky Booking Sidebar) -->
+        <div class="col-lg-4">
+          <aside class="sticky-booking-widget" data-aos="fade-left" data-aos-duration="1000">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase small"><i class="fa-solid fa-crown me-1"></i> Sovereign Charter</span>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success px-2 py-1 small">Instant Audit</span>
+            </div>
+
+            <h3 class="h4 fw-bold mb-1">Reserve Sanctuary</h3>
+            <p class="text-muted small mb-4">Master Estate Buyout &bull; Starting at <strong class="fs-4 fw-bolder text-dark">$5,200</strong> <span class="small fw-normal">/ guest</span></p>
+
+            <form class="d-flex flex-column gap-3" id="sanctuaryBookingForm" onsubmit="event.preventDefault(); triggerBookingInquiry();">
+              <!-- Dates -->
+              <div>
+                <label class="form-label small fw-bold text-dark mb-1"><i class="fa-solid fa-calendar-days text-primary me-1"></i> Expedition Dates</label>
+                <input type="text" class="form-control form-control-vip fw-bold" value="July 12, 2026 - July 19, 2026 (7 Nights)" readonly />
+              </div>
+
+              <!-- Suites -->
+              <div>
+                <label class="form-label small fw-bold text-dark mb-1"><i class="fa-solid fa-key text-warning me-1"></i> Curation Scope</label>
+                <select class="form-select form-select-vip fw-semibold" id="bookingScopeSelect" onchange="updatePriceCalculator()">
+                  <option value="buyout" selected>Full Diplomatic Buyout (Up to 12 VIPs)</option>
+                  <option value="master">2 Master Caldera Cave Suites (4 VIPs)</option>
+                  <option value="single">1 Flagship Volcanic Villa (2 VIPs)</option>
+                </select>
+              </div>
+
+              <!-- Helipad Option -->
+              <div>
+                <label class="form-label small fw-bold text-dark mb-1"><i class="fa-solid fa-helicopter text-info me-1"></i> Transit Dispatch</label>
+                <select class="form-select form-select-vip fw-semibold" id="transitSelect" onchange="updatePriceCalculator()">
+                  <option value="included" selected>Sikorsky S-76 Heli-Transfer (Included)</option>
+                  <option value="yacht">Riva 68' Private Marina Tender (+ $1,800)</option>
+                  <option value="none">Self-Arranged Tarmac Chauffeur ($0)</option>
+                </select>
+              </div>
+
+              <!-- Price Breakdown Summary -->
+              <div class="p-3 bg-slate bg-opacity-5 rounded-4 border my-2">
+                <div class="d-flex justify-content-between small text-muted mb-2">
+                  <span>Base Sanctuary Charter (7 Nights)</span>
+                  <span class="fw-bold text-dark" id="baseCalcVal">$62,400</span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mb-2">
+                  <span>24/7 Michelin Brigade &amp; Butler Staff</span>
+                  <span class="fw-bold text-success">Complimentary</span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mb-2 border-bottom pb-2">
+                  <span>Aviation Tarmac Clearance Fee</span>
+                  <span class="fw-bold text-dark" id="transitCalcVal">$0</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                  <span class="fw-bold text-dark">Estimated Investment</span>
+                  <span class="fs-4 fw-extrabold text-primary" id="totalCalcVal">$62,400</span>
+                </div>
+                <span class="d-block text-end small text-muted" style="font-size: 0.72rem;">Taxes &amp; sovereign maritime permits included</span>
+              </div>
+
+              <!-- CTA Submit -->
+              <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i> Commission Private Booking
+              </button>
+
+              <!-- Instant WhatsApp Hotline -->
+              <a href="tel:+1800888LUXE" class="btn btn-outline-dark w-100 py-3 rounded-pill fw-bold small d-flex align-items-center justify-content-center gap-2">
+                <i class="fa-solid fa-phone-volume text-warning"></i> Speak With Master Atelier
+              </a>
+            </form>
+
+            <div class="mt-4 pt-3 border-top text-center">
+              <div class="d-flex align-items-center justify-content-center gap-2 text-muted small mb-1">
+                <i class="fa-solid fa-lock text-success"></i>
+                <span class="fw-semibold">100% Confidential Escrow Protocol</span>
+              </div>
+              <p class="text-muted mb-0" style="font-size: 0.78rem;">Audited NDA signed automatically upon inquiry submission.</p>
+            </div>
+          </aside>
+        </div>
+        <!-- END RIGHT COLUMN -->
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 14. Booking CTA Banner -->
+  <section class="container mb-5" id="booking-cta-section" data-aos="fade-up">
+    <div class="cta-grand-banner">
+      <div class="row align-items-center position-relative z-2 g-4">
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold text-uppercase mb-3"><i class="fa-solid fa-compass me-1"></i> Bespoke Sovereign Atelier</span>
+          <h2 class="display-4 fw-bold text-white mb-3">Ready To Command Your Caldera Sanctuary?</h2>
+          <p class="lead text-light text-opacity-80 fw-light max-w-2xl mb-0">
+            Our Private Travel Designers are available 24/7 to tailor every nautical charter, private flight coordinate, and dietary preference.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-flex flex-column gap-3 align-items-center align-items-lg-end">
+            <a href="contact.html" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bolder text-dark shadow-lg d-inline-flex align-items-center gap-2">
+              <i class="fa-solid fa-crown"></i> Initiate Consultation
+            </a>
+            <span class="text-white text-opacity-60 small"><i class="fa-solid fa-phone me-1 text-info"></i> Direct Global VIP Hotline: +1 (800) 888-LUXE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Photo Gallery -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 py-3 px-4">
+          <h5 class="modal-title text-white fw-bold" id="galleryModalTitle">Santorini Perspective</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 text-center bg-black">
+          <img src="" id="galleryModalImg" class="img-fluid max-h-80vh w-100 object-fit-contain" alt="Enlarged View" style="max-height: 80vh;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 mb-3 d-block fw-bold" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span>
+          </a>
+          <p class="text-light text-opacity-75 mb-4 pe-lg-4 lh-lg small">The world's premier bespoke sovereign travel atelier. Curating confidential private island buyouts, superyacht charters, and diplomatic alpine reserves.</p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 fw-bold mb-4 text-white text-uppercase tracking-wider">Sanctuaries</h4>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Baa Atoll Submarine</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Santorini Caldera Reserve</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Kyoto Wabi-Sabi Ryokan</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Monte Carlo Penthouse</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="h6 fw-bold mb-4 text-white text-uppercase tracking-wider">Navigation</h4>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light text-opacity-75 text-decoration-none">Atelier Heritage</a></li>
+            <li><a href="tours.html" class="text-light text-opacity-75 text-decoration-none">Luxury Expeditions</a></li>
+            <li><a href="gallery.html" class="text-light text-opacity-75 text-decoration-none">Visual Anthology</a></li>
+            <li><a href="blog.html" class="text-light text-opacity-75 text-decoration-none">Sovereign Journal</a></li>
+            <li><a href="faq.html" class="text-light text-opacity-75 text-decoration-none">Confidential FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h4 class="h6 fw-bold mb-4 text-white text-uppercase tracking-wider">VIP Diplomatic Concierge</h4>
+          <p class="text-light text-opacity-75 mb-3 small">Available 24/7/365 for sovereign members and bespoke inquiries.</p>
+          <div class="d-flex align-items-center mb-3 bg-white bg-opacity-5 p-3 rounded-4 border border-light border-opacity-10">
+            <i class="fa-solid fa-phone-volume fs-3 text-warning me-3"></i>
+            <div>
+              <span class="small text-light text-opacity-60 d-block">Direct Global Hotline</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Sovereign Atelier Inc. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Premium Page Interactive Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 800, once: true });
+      }
+
+      // Initialize Swiper JS Gallery (Main + Thumbs)
+      if (typeof Swiper !== 'undefined') {
+        var thumbSwiper = new Swiper('#thumbGallerySwiper', {
+          spaceBetween: 12,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+
+        var mainSwiper = new Swiper('#mainGallerySwiper', {
+          spaceBetween: 10,
+          effect: 'fade',
+          fadeEffect: { crossFade: true },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          thumbs: {
+            swiper: thumbSwiper,
+          },
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+          }
+        });
+      }
+    });
+
+    // Modal Image Setter
+    function setModalImage(url, title) {
+      document.getElementById('galleryModalImg').src = url;
+      document.getElementById('galleryModalTitle').textContent = title;
+    }
+
+    // Dynamic Price Calculator
+    function updatePriceCalculator() {
+      var scope = document.getElementById('bookingScopeSelect').value;
+      var transit = document.getElementById('transitSelect').value;
+      
+      var baseVal = 62400;
+      if (scope === 'master') baseVal = 24800;
+      if (scope === 'single') baseVal = 14200;
+
+      var transitVal = 0;
+      if (transit === 'yacht') transitVal = 1800;
+
+      var total = baseVal + transitVal;
+
+      document.getElementById('baseCalcVal').textContent = '$' + baseVal.toLocaleString();
+      document.getElementById('transitCalcVal').textContent = '$' + transitVal.toLocaleString();
+      document.getElementById('totalCalcVal').textContent = '$' + total.toLocaleString();
+    }
+
+    // Booking Commission Trigger Alert
+    function triggerBookingInquiry() {
+      var total = document.getElementById('totalCalcVal').textContent;
+      alert('Your confidential booking inquiry for the Santorini Caldera Diplomatic Reserve (Investment: ' + total + ') has been transmitted to our Senior Atelier Dispatch.\n\nA dedicated Private Travel Designer will contact you within 15 minutes via encrypted channel.');
+    }
+  </script>
+</body>
+</html>

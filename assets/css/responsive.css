@@ -1,0 +1,169 @@
+/* ==========================================================================
+   WanderLuxe Responsive Stylesheet (Bootstrap Breakpoint Strategy)
+   ========================================================================== */
+
+/* Large Devices (Tablets / Laptops below 1200px) */
+@media (max-width: 1199.98px) {
+  .hero-content h1 {
+    font-size: 52px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .search-filter-card {
+    padding: 24px;
+  }
+  
+  .newsletter-card {
+    padding: 44px 32px;
+  }
+}
+
+/* Medium Devices (Tablets below 992px) */
+@media (max-width: 991.98px) {
+  .header-top .top-contact {
+    display: none;
+  }
+  
+  .hero-section {
+    min-height: 75vh;
+    padding: 80px 0 140px;
+    text-align: center;
+  }
+  
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .search-filter-wrapper {
+    margin-top: -60px;
+  }
+  
+  .search-filter-card .nav-tabs {
+    justify-content: center;
+  }
+  
+  .dest-card {
+    height: 340px;
+  }
+  
+  .cta-parallax h2 {
+    font-size: 38px;
+  }
+  
+  .mega-footer {
+    padding: 60px 0 0;
+  }
+}
+
+/* Small Devices (Landscape phones & small tablets below 768px) */
+@media (max-width: 767.98px) {
+  .header-top {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .header-top .top-links {
+    justify-content: center !important;
+    margin-top: 6px;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 30px;
+  }
+  
+  .search-filter-card {
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .search-filter-card .nav-link {
+    padding: 10px 16px !important;
+    font-size: 14px;
+  }
+  
+  .tour-card-thumb {
+    height: 210px;
+  }
+  
+  .newsletter-card {
+    padding: 36px 20px;
+    text-align: center;
+  }
+  
+  .newsletter-input-group {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    gap: 12px;
+    padding: 0;
+  }
+  
+  .newsletter-input-group input {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  .newsletter-input-group button {
+    width: 100%;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+  
+  .payment-methods {
+    justify-content: center;
+    margin-top: 14px;
+  }
+}
+
+/* Extra Small Devices (Portrait phones below 576px) */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .hero-content h1 {
+    font-size: 34px;
+  }
+  
+  .dest-card {
+    height: 280px;
+  }
+  
+  .cta-parallax {
+    padding: 80px 0;
+  }
+  
+  .cta-parallax h2 {
+    font-size: 30px;
+  }
+  
+  .cta-parallax p {
+    font-size: 16px;
+  }
+  
+  .pagination-wl {
+    gap: 6px;
+  }
+  
+  .page-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

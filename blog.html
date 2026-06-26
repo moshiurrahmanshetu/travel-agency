@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The WanderLuxe Journal - Bespoke Travel Chronicles</title>
+  <meta name="description" content="Explore insights, trend analyses, and intimate memoirs from our travel historians, sommeliers, and private expedition guides across the globe." />
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-location-dot me-1"></i> New York &bull; London &bull; Tokyo &bull; Dubai</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        Wander<span>Luxe</span><span class="brand-dot">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tours.html" class="btn-wl-primary">
+            <i class="fa-solid fa-compass me-1"></i> Book Your Trip
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" href="blog.html">Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="page-hero" id="hero-banner" style="background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.75)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80') center/cover;">
+    <div class="container page-hero-content" data-aos="fade-up">
+      <h1 class="display-3 fw-bold mb-3">The Atelier Journal</h1>
+      <p class="lead max-w-2xl mx-auto text-light text-opacity-80">Chronicles of private aviation trends, hidden gastronomic UNESCO gems, and expedition dispatches.</p>
+      <div class="breadcrumb-custom">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="active">Journal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post Section -->
+  <section class="py-5 mt-3" id="featured-post">
+    <div class="container">
+      <div class="card border-0 shadow-lg rounded-5 overflow-hidden bg-dark text-white" data-aos="fade-up">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-7 position-relative">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80" class="w-100 object-fit-cover" style="min-height: 400px; height: 100%;" alt="Featured Jet" />
+            <span class="badge bg-primary position-absolute top-0 start-0 m-4 px-4 py-2 rounded-pill fs-6 shadow">Editor's Pick</span>
+          </div>
+          <div class="col-lg-5 p-4 p-md-5 d-flex flex-column justify-content-center">
+            <div class="d-flex align-items-center gap-3 small text-light text-opacity-75 mb-3">
+              <span><i class="fa-regular fa-calendar me-1"></i> June 24, 2026</span>
+              <span>&bull;</span>
+              <span><i class="fa-regular fa-clock me-1"></i> 8 Min Read</span>
+            </div>
+            <h2 class="h3 fw-bold mb-3 line-clamp-2">The Evolution of Ultra-Long-Range Private Aviation in 2026</h2>
+            <p class="text-light text-opacity-75 mb-4 line-clamp-3">How the Bombardier Global 8000 and Gulfstream G800 are transforming non-stop transoceanic itineraries, enabling bespoke breakfast-in-London to dinner-in-Sydney voyages.</p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <div class="d-flex align-items-center gap-2">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" class="rounded-circle object-fit-cover" style="width:36px;height:36px;" alt="Elena Vance" />
+                <span class="small fw-semibold">Elena Vance</span>
+              </div>
+              <a href="single-blog.html" class="btn btn-outline-warning btn-sm rounded-pill px-4">Read Dispatch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid Section -->
+  <section class="py-5" id="blog-grid">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+        <div>
+          <span class="text-primary tracking-wider text-uppercase fw-bold small d-block mb-1">Latest Dispatches</span>
+          <h3 class="h2 fw-bold mb-0">Curated Travel Essays</h3>
+        </div>
+        <div class="d-none d-md-flex gap-2">
+          <button class="btn btn-dark btn-sm px-3 active">All</button>
+          <button class="btn btn-outline-dark btn-sm px-3">Aviation</button>
+          <button class="btn btn-outline-dark btn-sm px-3">Sanctuaries</button>
+          <button class="btn btn-outline-dark btn-sm px-3">Gastronomy</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Post 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Santorini Architecture" />
+              </a>
+              <span class="badge bg-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Sanctuaries</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>June 18, 2026</span> &bull; <span>5 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">Inside Santorini's Most Exclusive Subterranean Cave Villas</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">Architectural secrets behind the cliffside infinity pools carved directly into prehistoric volcanic caldera rock formations.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Julian Thorne</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Serengeti Conservation" />
+              </a>
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Conservation</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>June 12, 2026</span> &bull; <span>11 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">The New Era of Regenerative Safari Philanthropy</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">How private reserve buyouts in Tanzania fund anti-poaching AI drones and community scholarship endowments.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Dr. Marcus Sterling</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Superyacht Dining" />
+              </a>
+              <span class="badge bg-info position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Gastronomy</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>May 29, 2026</span> &bull; <span>6 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">Michelin-Star Degustations on the High Seas</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">An interview with our fleet's executive sommelier on provisioning rare 1982 Bordeaux vintages aboard superyachts.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Chef Laurent Mercier</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Kyoto Ryokan" />
+              </a>
+              <span class="badge bg-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Sanctuaries</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>May 15, 2026</span> &bull; <span>7 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">The Art of Omotenashi: Kyoto's Hidden Imperial Ryokans</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">Exploring century-old Japanese hospitality traditions reserved strictly for private invitations.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Kenji Takahashi</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Maldives Atoll" />
+              </a>
+              <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Islands</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>May 04, 2026</span> &bull; <span>9 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">Chartering Baa Atoll's Only Solar-Powered Private Island</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">Zero-carbon luxury living with private manta ray research submarines and underwater observatories.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Sarah Jenkins</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <article class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 wl-card">
+            <div class="position-relative">
+              <a href="single-blog.html">
+                <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80" class="card-img-top object-fit-cover" style="height:240px;" alt="Patagonia Fjord" />
+              </a>
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Expeditions</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 small text-muted mb-2">
+                <span>April 22, 2026</span> &bull; <span>8 Min Read</span>
+              </div>
+              <h4 class="h5 fw-bold mb-3"><a href="single-blog.html" class="text-dark text-decoration-none hover-primary">Helicopter Skiing the Untamed Glaciers of Patagonia</a></h4>
+              <p class="text-muted small mb-4 flex-grow-1">Private lodge access and bespoke mountaineering guides navigating pristine Andean powder bowls.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">By Liam O'Connor</span>
+                <a href="single-blog.html" class="text-primary fw-bold small text-decoration-none">Read Essay &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Pagination Design -->
+      <nav class="mt-5 pt-4 d-flex justify-content-center" aria-label="Journal pagination" data-aos="fade-up">
+        <ul class="pagination pagination-wl gap-2 mb-0">
+          <li class="page-item disabled"><a class="page-link rounded-circle border-0 shadow-sm" href="#" tabindex="-1"><i class="fa-solid fa-chevron-left"></i></a></li>
+          <li class="page-item active"><a class="page-link rounded-circle border-0 shadow-sm fw-bold" href="#">1</a></li>
+          <li class="page-item"><a class="page-link rounded-circle border-0 shadow-sm fw-bold" href="#">2</a></li>
+          <li class="page-item"><a class="page-link rounded-circle border-0 shadow-sm fw-bold" href="#">3</a></li>
+          <li class="page-item"><a class="page-link rounded-circle border-0 shadow-sm" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- Newsletter Design -->
+  <section class="py-5 bg-light my-3 border-top border-bottom" id="newsletter-section">
+    <div class="container max-w-4xl mx-auto py-4 text-center" data-aos="zoom-in">
+      <i class="fa-solid fa-envelope-open-text fs-1 text-primary mb-3"></i>
+      <h3 class="h2 fw-bold mb-2">Subscribe to The Atelier Dispatch</h3>
+      <p class="text-muted mb-4 max-w-xl mx-auto">Receive our monthly confidential digest of newly acquired private islands, charter lookbooks, and invitation-only summits.</p>
+      <form class="row g-2 justify-content-center max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Subscribed to private dispatches.');">
+        <div class="col-sm-8">
+          <input type="email" class="form-control form-control-lg rounded-pill border-0 shadow-sm px-4" placeholder="Enter private email address..." required />
+        </div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-dark btn-lg w-100 rounded-pill fw-bold shadow">Join Circle</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-dark text-white position-relative overflow-hidden" id="cta-section">
+    <div class="container py-5 position-relative z-2">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 text-center text-lg-start" data-aos="fade-right">
+          <span class="text-warning text-uppercase tracking-wider fw-bold small d-block mb-2">Press &amp; Media Inquiries</span>
+          <h2 class="display-5 fw-bold mb-3">Wish to Commission an Exclusive Feature?</h2>
+          <p class="lead text-light text-opacity-75 mb-0">Our editorial team arranges private press briefings and high-resolution media vaults for accredited luxury publications.</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end" data-aos="fade-left">
+          <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow">
+            Media Concierge <i class="fa-solid fa-paper-plane ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 mb-3 d-block" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span>
+          </a>
+          <p class="text-light text-opacity-75 mb-4 pe-lg-4">The world's premier bespoke luxury travel atelier. Curating transformative expeditions, private jet circumnavigations, and superyacht charters.</p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Sanctuaries</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Baa Atoll, Maldives</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Santorini Caldera</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Kyoto Imperial</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">St. Barthélemy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Navigation</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="about.html" class="text-light text-opacity-75 text-decoration-none">Our Story &amp; Atelier</a></li>
+            <li><a href="tours.html" class="text-light text-opacity-75 text-decoration-none">Expedition Packages</a></li>
+            <li><a href="gallery.html" class="text-light text-opacity-75 text-decoration-none">Visual Showcase</a></li>
+            <li><a href="blog.html" class="text-light text-opacity-75 text-decoration-none">Travel Journal</a></li>
+            <li><a href="faq.html" class="text-light text-opacity-75 text-decoration-none">Private FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">VIP Private Concierge</h5>
+          <p class="text-light text-opacity-75 mb-3">Available 24/7/365 for members and bespoke inquiries.</p>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fa-solid fa-phone-volume fs-4 text-warning me-3"></i>
+            <div>
+              <span class="small text-muted d-block">Direct Global Hotline</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Atelier Inc. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

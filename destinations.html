@@ -1,0 +1,1548 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bespoke Destinations Portfolio - WanderLuxe Sovereign Travel Atelier</title>
+  <meta name="description" content="Explore WanderLuxe's audited portfolio of world-class bespoke luxury destinations, unlisted private islands, royal palazzos, and secluded sanctuaries." />
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper JS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- ThemeForest Premium Quality Styles -->
+  <style>
+    :root {
+      --wl-primary: #0C6EFD;
+      --wl-secondary: #00BFA6;
+      --wl-accent: #FFB703;
+      --wl-dark: #0f172a;
+      --wl-slate: #1e293b;
+      --wl-light-bg: #f8fafc;
+      --wl-border: rgba(15, 23, 42, 0.08);
+      --wl-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #334155;
+      overflow-x: hidden;
+      background-color: var(--wl-light-bg);
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      letter-spacing: -0.025em;
+      color: var(--wl-dark);
+    }
+
+    /* 1. Hero & 2. Breadcrumb */
+    .page-hero {
+      position: relative;
+      height: 68vh;
+      min-height: 540px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.68) 0%, rgba(15,23,42,0.88) 100%), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-bottom: 60px;
+    }
+    .breadcrumb-custom {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 10px 26px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .breadcrumb-custom a {
+      color: var(--wl-accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--wl-transition);
+    }
+    .breadcrumb-custom a:hover { color: white; }
+    .breadcrumb-custom span { color: rgba(255,255,255,0.6); margin: 0 12px; font-size: 0.85rem; }
+    .breadcrumb-custom .active { color: white; font-weight: 600; font-size: 0.95rem; }
+
+    /* 3. Destination Search & 4. Destination Filters (Floating Glass Bar) */
+    .filter-floating-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 25px 70px rgba(15, 23, 42, 0.14);
+      border: 1px solid var(--wl-border);
+      position: relative;
+      z-index: 20;
+      margin-top: -80px;
+      margin-bottom: 40px;
+    }
+    .form-control-custom, .form-select-custom {
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--wl-dark);
+      background-color: #f8fafc;
+      transition: var(--wl-transition);
+    }
+    .form-control-custom:focus, .form-select-custom:focus {
+      background-color: white;
+      border-color: var(--wl-primary);
+      box-shadow: 0 0 0 4px rgba(12, 110, 253, 0.12);
+    }
+    .filter-chip {
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 24px;
+      border-radius: 50px;
+      transition: var(--wl-transition);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-chip:hover {
+      border-color: var(--wl-primary);
+      color: var(--wl-primary);
+      transform: translateY(-2px);
+    }
+    .filter-chip.active {
+      background: var(--wl-dark);
+      border-color: var(--wl-dark);
+      color: white;
+      box-shadow: 0 8px 20px rgba(15,23,42,0.2);
+    }
+
+    /* 5. Featured Destinations (Spotlight Banner Cards) */
+    .featured-spotlight-card {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      height: 440px;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.15);
+      border: 1px solid rgba(255,255,255,0.1);
+      group: block;
+    }
+    .featured-spotlight-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .featured-spotlight-card:hover img { transform: scale(1.08); }
+    .spotlight-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.88) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px;
+      color: white;
+      z-index: 2;
+    }
+
+    /* 6. Destination Cards (Main Grid Premium Design) */
+    .dest-card {
+      background: white;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 10px 35px rgba(15,23,42,0.04);
+      transition: var(--wl-transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .dest-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 55px rgba(15,23,42,0.12);
+      border-color: rgba(12, 110, 253, 0.3);
+    }
+    .dest-img-wrap {
+      position: relative;
+      height: 290px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    .dest-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .dest-card:hover .dest-img-wrap img { transform: scale(1.1); }
+    
+    /* Wishlist Button */
+    .btn-wishlist {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 1.15rem;
+      transition: var(--wl-transition);
+      z-index: 5;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .btn-wishlist:hover {
+      background: white;
+      color: #ef4444;
+      transform: scale(1.12);
+    }
+    .btn-wishlist.active {
+      color: #ef4444;
+      background: white;
+    }
+    
+    /* Duration Badge */
+    .dest-duration {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.15);
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .card-body-dest {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    /* 7. Popular Countries */
+    .country-pill {
+      background: white;
+      border-radius: 20px;
+      padding: 16px 22px;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 6px 20px rgba(15,23,42,0.03);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--wl-dark);
+      transition: var(--wl-transition);
+    }
+    .country-pill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,23,42,0.09);
+      border-color: var(--wl-secondary);
+      color: var(--wl-primary);
+    }
+    .country-flag-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .country-flag-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* 8. Top Cities Overlay Boxes */
+    .city-hub-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      height: 260px;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
+    }
+    .city-hub-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .city-hub-card:hover img { transform: scale(1.1); }
+    .city-hub-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.2) 60%, transparent 100%);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: white;
+    }
+
+    /* 9. Travel Types */
+    .travel-type-card {
+      background: white;
+      border: 1px solid var(--wl-border);
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      height: 100%;
+      transition: var(--wl-transition);
+      text-decoration: none;
+      display: block;
+      color: var(--wl-dark);
+    }
+    .travel-type-card:hover {
+      background: var(--wl-dark);
+      color: white;
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(15,23,42,0.18);
+    }
+    .travel-type-card:hover p, .travel-type-card:hover h4 { color: white !important; }
+    .travel-type-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: rgba(12, 110, 253, 0.1);
+      color: var(--wl-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 20px;
+      transition: var(--wl-transition);
+    }
+    .travel-type-card:hover .travel-type-icon {
+      background: var(--wl-accent);
+      color: var(--wl-dark);
+      transform: rotate(6deg) scale(1.1);
+    }
+
+    /* 10. Load More Button */
+    .btn-load-more {
+      background: white;
+      border: 2px solid var(--wl-dark);
+      color: var(--wl-dark);
+      font-weight: 700;
+      padding: 16px 48px;
+      border-radius: 50px;
+      transition: var(--wl-transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.05rem;
+    }
+    .btn-load-more:hover {
+      background: var(--wl-dark);
+      color: white;
+      box-shadow: 0 15px 30px rgba(15,23,42,0.2);
+      transform: translateY(-3px);
+    }
+
+    /* 11. Newsletter CTA Banner */
+    .newsletter-premium-box {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      border-radius: 36px;
+      padding: 90px 48px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 35px 80px rgba(15,23,42,0.25);
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+    .newsletter-premium-box::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,183,3,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Wishlist Toast Notification */
+    .wishlist-toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--wl-dark);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .wishlist-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-location-dot me-1"></i> New York &bull; London &bull; Tokyo &bull; Dubai</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+              <li><a class="dropdown-item" href="#">GBP (&pound;)</a></li>
+            </ul>
+          </div>
+          <span class="top-divider">|</span>
+          <div class="social-top ms-2 d-inline-flex gap-2">
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar shadow-sm sticky-top bg-white" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand fs-3 fw-bold" href="index.html">
+        Wander<span class="text-primary">Luxe</span><span class="brand-dot text-warning">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active text-primary" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tours.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-compass"></i> Book Your Trip
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white fs-3 fw-bold" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house me-3 text-primary"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white active text-primary" href="destinations.html"><i class="fa-solid fa-earth-americas me-3 text-info"></i> Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tours.html"><i class="fa-solid fa-suitcases me-3 text-warning"></i> Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html"><i class="fa-solid fa-gem me-3 text-danger"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html"><i class="fa-solid fa-images me-3 text-success"></i> Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html"><i class="fa-solid fa-book-open me-3 text-primary"></i> Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html"><i class="fa-solid fa-circle-question me-3 text-info"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i class="fa-solid fa-envelope me-3 text-warning"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1. Hero Banner & 2. Breadcrumb -->
+  <section class="page-hero" id="hero-banner">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wider mb-3 shadow-sm">
+        <i class="fa-solid fa-crown me-2"></i> Audited Sovereign Portfolio
+      </span>
+      <h1 class="display-3 fw-bolder text-white mb-3">Curated Sanctuaries &amp; Estates</h1>
+      <p class="lead max-w-2xl mx-auto text-light text-opacity-85 fs-4 fw-light">
+        Unlocking unlisted private islands, historic palazzos, and confidential alpine helipad reserves worldwide.
+      </p>
+      
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-custom shadow-sm">
+        <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+        <span>/</span>
+        <span class="active">Luxury Destinations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Destination Search & 4. Destination Filters Bar -->
+  <section class="container" id="search-filter-section">
+    <div class="filter-floating-card" data-aos="fade-up" data-aos-delay="100">
+      <form class="row g-3 align-items-center" id="destSearchForm" onsubmit="event.preventDefault(); filterPortfolio();">
+        <!-- Search Input -->
+        <div class="col-lg-4 col-md-12">
+          <label class="form-label small fw-bold text-uppercase text-muted mb-1"><i class="fa-solid fa-magnifying-glass me-1 text-primary"></i> Keyword Search</label>
+          <div class="input-group">
+            <input type="text" class="form-control form-control-custom w-100" id="searchInput" placeholder="Search country, city, or style (e.g. Kyoto)..." oninput="filterPortfolio()" />
+          </div>
+        </div>
+
+        <!-- Region Filter -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <label class="form-label small fw-bold text-uppercase text-muted mb-1"><i class="fa-solid fa-earth-americas me-1 text-info"></i> Continental Region</label>
+          <select class="form-select form-select-custom" id="regionSelect" onchange="syncChipFromSelect(); filterPortfolio();">
+            <option value="all">All Global Regions</option>
+            <option value="europe">Europe &amp; Mediterranean</option>
+            <option value="asia">Asia-Pacific</option>
+            <option value="americas">Americas &amp; Caribbean</option>
+            <option value="africa">Africa &amp; Indian Ocean</option>
+            <option value="middleeast">Middle East &amp; UAE</option>
+          </select>
+        </div>
+
+        <!-- Travel Style Filter -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <label class="form-label small fw-bold text-uppercase text-muted mb-1"><i class="fa-solid fa-gem me-1 text-warning"></i> Curation Style</label>
+          <select class="form-select form-select-custom" id="styleSelect" onchange="filterPortfolio()">
+            <option value="all">All Bespoke Styles</option>
+            <option value="island">Private Island Buyouts</option>
+            <option value="heritage">Palace &amp; Heritage Estates</option>
+            <option value="safari">Wilderness &amp; Safari Camps</option>
+            <option value="yacht">Superyacht Marina Harbors</option>
+            <option value="chalet">Alpine Helipad Chalets</option>
+          </select>
+        </div>
+
+        <!-- Action Button -->
+        <div class="col-lg-2 col-md-4 d-flex align-items-end mt-lg-4 pt-lg-2">
+          <button type="button" class="btn btn-primary w-100 py-3 rounded-4 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2" onclick="filterPortfolio()">
+            <i class="fa-solid fa-sliders"></i> Apply Filter
+          </button>
+        </div>
+      </form>
+
+      <!-- Interactive Filter Chips -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 pt-3 border-top">
+        <span class="small fw-bold text-muted align-self-center me-2 d-none d-md-inline"><i class="fa-solid fa-bolt text-warning me-1"></i> Quick Filter:</span>
+        <div class="filter-chip active" data-region="all" onclick="selectChip(this)"><i class="fa-solid fa-globe small"></i> All Portfolio (<span id="visibleCount">12</span>)</div>
+        <div class="filter-chip" data-region="europe" onclick="selectChip(this)">Europe</div>
+        <div class="filter-chip" data-region="asia" onclick="selectChip(this)">Asia-Pacific</div>
+        <div class="filter-chip" data-region="americas" onclick="selectChip(this)">Americas</div>
+        <div class="filter-chip" data-region="africa" onclick="selectChip(this)">Africa</div>
+        <div class="filter-chip" data-region="middleeast" onclick="selectChip(this)">Middle East</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Featured Destinations (Spotlight Buyouts) -->
+  <section class="py-4 my-2" id="featured-destinations">
+    <div class="container">
+      <div class="row align-items-end mb-4" data-aos="fade-up">
+        <div class="col-lg-8">
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Exclusive Masterpieces</span>
+          <h2 class="display-6 fw-bold mb-0">Featured Sovereign Sanctuaries</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-2 mt-lg-0">
+          <span class="badge bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill fw-semibold"><i class="fa-solid fa-fire me-1"></i> Highly Requested For Season 2026</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Spotlight 1 -->
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <div class="featured-spotlight-card">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80" alt="Santorini Caldera Diplomatic Reserve" />
+            <button class="btn-wishlist" onclick="toggleWishlist(this, 'Santorini Caldera Diplomatic Reserve')" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="spotlight-overlay">
+              <div class="d-flex justify-content-between align-items-start">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold small text-uppercase"><i class="fa-solid fa-crown me-1"></i> Flagship Buyout</span>
+                <span class="badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill text-white"><i class="fa-regular fa-clock me-1 text-warning"></i> 7 Days / 6 Nights</span>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="text-warning fw-bold"><i class="fa-solid fa-star"></i> 4.99</span>
+                  <span class="text-light text-opacity-75 small">(142 Audited VIP Reviews)</span>
+                  <span class="text-light text-opacity-50">|</span>
+                  <span class="text-info fw-semibold small"><i class="fa-solid fa-location-dot me-1"></i> Oia, Greece</span>
+                </div>
+                <h3 class="display-6 fw-bold text-white mb-2">Santorini Caldera Diplomatic Reserve</h3>
+                <p class="text-light text-opacity-85 mb-4 max-w-xl small lh-base">
+                  Unlisted cliffside estate buyout comprising 12 private volcanic suites, private Sikorsky helipad access, dedicated Michelin sommelier, and daily Riva sunset cruising.
+                </p>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pt-3 border-top border-light border-opacity-25">
+                  <div>
+                    <span class="small text-light text-opacity-75 d-block">Starting charter investment</span>
+                    <span class="fs-4 fw-extrabold text-warning">$5,200 <small class="fs-6 text-white text-opacity-75 fw-normal">/ guest</small></span>
+                  </div>
+                  <a href="destination-details.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2">
+                    Commission Voyage <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spotlight 2 -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="featured-spotlight-card">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80" alt="Baa Atoll Submarine Ateliers" />
+            <button class="btn-wishlist" onclick="toggleWishlist(this, 'Baa Atoll Submarine Ateliers')" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <div class="spotlight-overlay">
+              <div class="d-flex justify-content-between align-items-start">
+                <span class="badge bg-info text-dark px-3 py-2 rounded-pill fw-bold small text-uppercase"><i class="fa-solid fa-gem me-1"></i> Marine Sanctuary</span>
+                <span class="badge bg-dark bg-opacity-75 backdrop-blur px-3 py-2 rounded-pill text-white"><i class="fa-regular fa-clock me-1 text-warning"></i> 8 Days / 7 Nights</span>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="text-warning fw-bold"><i class="fa-solid fa-star"></i> 5.00</span>
+                  <span class="text-light text-opacity-75 small">(118 Audited VIP Reviews)</span>
+                  <span class="text-light text-opacity-50">|</span>
+                  <span class="text-info fw-semibold small"><i class="fa-solid fa-location-dot me-1"></i> Baa Atoll, Maldives</span>
+                </div>
+                <h3 class="display-6 fw-bold text-white mb-2">Baa Atoll Submarine Ateliers</h3>
+                <p class="text-light text-opacity-85 mb-4 max-w-xl small lh-base">
+                  UNESCO Biosphere Reserve overwater palace featuring underwater glass dining salons, personal Triton submarine exploration, and 24/7 dedicated royal butler dispatch.
+                </p>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pt-3 border-top border-light border-opacity-25">
+                  <div>
+                    <span class="small text-light text-opacity-75 d-block">Starting charter investment</span>
+                    <span class="fs-4 fw-extrabold text-warning">$7,800 <small class="fs-6 text-white text-opacity-75 fw-normal">/ guest</small></span>
+                  </div>
+                  <a href="destination-details.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark d-inline-flex align-items-center gap-2">
+                    Commission Voyage <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Destination Cards (Main Grid Portfolio) -->
+  <section class="py-5 my-3" id="destination-grid">
+    <div class="container">
+      <div class="row align-items-end mb-5" data-aos="fade-up">
+        <div class="col-lg-8">
+          <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">The Global Catalog</span>
+          <h2 class="display-6 fw-bold mb-0">Audited Luxury Destinations</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-2 mt-lg-0 text-muted">
+          Showing <span id="currentShowingCount" class="fw-bold text-dark">9</span> of <span class="fw-bold text-dark">12</span> Sanctuaries
+        </div>
+      </div>
+
+      <div class="row g-4" id="portfolioContainer">
+        
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="europe" data-style="heritage" data-country="Italy" data-city="Positano" data-aos="fade-up">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Amalfi Cliffside Palazzo" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Amalfi Cliffside Palazzo')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 6 Days / 5 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Italy</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.97 <span class="text-muted fw-normal">(130)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Amalfi Cliffside Palazzo</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Historic 11th-century cliffside palazzo overlooking Positano bay, converted into confidential suites with private lemon grove terraces and Riva charter docks.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$4,200 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="asia" data-style="heritage" data-country="Japan" data-city="Kyoto" data-aos="fade-up" data-aos-delay="100">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Arashiyama Wabi-Sabi Ryokan" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Arashiyama Wabi-Sabi Ryokan')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 7 Days / 6 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Japan</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.98 <span class="text-muted fw-normal">(95)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Arashiyama Wabi-Sabi Ryokan</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Secluded imperial pavilion set amidst dense bamboo forest. Features private mineral spring onsens, confidential kaiseki dining, and authentic geisha masters.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$5,600 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="africa" data-style="safari" data-country="Tanzania" data-city="Serengeti" data-aos="fade-up" data-aos-delay="200">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Serengeti Migration Canvas Suites" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Serengeti Migration Canvas Suites')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 5 Days / 4 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Tanzania</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 5.00 <span class="text-muted fw-normal">(84)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Serengeti Migration Canvas Suites</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Ultra-private luxury tented suites positioned directly along the Great Wildebeest Migration route. Includes private wildlife biologists and hot air balloon safaris.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$6,100 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="europe" data-style="yacht" data-country="Monaco" data-city="Monte Carlo" data-aos="fade-up">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80" alt="Monte Carlo Harbor Penthouse" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Monte Carlo Harbor Penthouse')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 4 Days / 3 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Monaco</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.96 <span class="text-muted fw-normal">(160)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Monte Carlo Harbor Penthouse</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Commanding panoramic views over Port Hercule superyacht marina. Includes VIP Grand Prix paddock access, private casino salon entry, and chauffeur fleet.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$8,500 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="americas" data-style="safari" data-country="Chile" data-city="Patagonia" data-aos="fade-up" data-aos-delay="100">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80" alt="Torres del Paine Fjord Sanctuary" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Torres del Paine Fjord Sanctuary')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 9 Days / 8 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Chile</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.99 <span class="text-muted fw-normal">(62)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Torres del Paine Fjord Sanctuary</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Architectural eco-sanctuary facing Torres del Paine granite horns. Equipped with private glacial expedition icebreakers and gourmet fireside degustation.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$4,900 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="africa" data-style="island" data-country="Seychelles" data-city="Félicité" data-aos="fade-up" data-aos-delay="200">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Félicité Granitic Island Villa" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Félicité Granitic Island Villa')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 7 Days / 6 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Seychelles</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 5.00 <span class="text-muted fw-normal">(78)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Félicité Granitic Island Villa</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Granite boulder sanctuaries nestled amidst untouched rainforest and turquoise coral reefs. Features dedicated organic spa pavilions and helipad transfers.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$7,100 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="europe" data-style="chalet" data-country="Switzerland" data-city="St. Moritz" data-aos="fade-up">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=80" alt="St. Moritz Helipad Chalet" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'St. Moritz Helipad Chalet')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 6 Days / 5 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Switzerland</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.98 <span class="text-muted fw-normal">(112)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">St. Moritz Helipad Chalet</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Ski-in/ski-out alpine fortress above Lake St. Moritz. Equipped with private underground heated pool, wine vault, and Olympic ski instructor guides.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$9,200 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="middleeast" data-style="heritage" data-country="UAE" data-city="Dubai" data-aos="fade-up" data-aos-delay="100">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Palm Jumeirah Royal Atrium" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Palm Jumeirah Royal Atrium')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 5 Days / 4 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> United Arab Emirates</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.95 <span class="text-muted fw-normal">(210)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Palm Jumeirah Royal Atrium</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Private frond tip beach mansion with 180-degree Arabian Gulf vistas, private superyacht berth, gold-leaf spa suite, and Rolls-Royce Phantom fleet.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$5,800 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-region="europe" data-style="heritage" data-country="United Kingdom" data-city="Cotswolds" data-aos="fade-up" data-aos-delay="200">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Cotswolds Aristocratic Estate" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Cotswolds Aristocratic Estate')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 4 Days / 3 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> United Kingdom</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.94 <span class="text-muted fw-normal">(88)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Cotswolds Aristocratic Estate</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                17th-century ducal manor set across 500 acres of private English countryside. Includes falconry lessons, trout stream fly-fishing, and vintage polo grounds.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$3,800 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden Cards for Load More (Items 10, 11, 12) -->
+        <!-- Card 10 -->
+        <div class="col-lg-4 col-md-6 portfolio-item load-more-hidden d-none" data-region="asia" data-style="island" data-country="French Polynesia" data-city="Bora Bora">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Bora Bora Motu Lagoon Villa" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Bora Bora Motu Lagoon Villa')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 7 Days / 6 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> French Polynesia</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 5.00 <span class="text-muted fw-normal">(104)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Bora Bora Motu Lagoon Villa</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Private coral motu island facing Mount Otemanu with overwater glass suites, private catamaran crew, and Polynesian holistic healing rituals.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$8,200 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="col-lg-4 col-md-6 portfolio-item load-more-hidden d-none" data-region="americas" data-style="heritage" data-country="Peru" data-city="Machu Picchu">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" alt="Sacred Valley Inca Sanctuary" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Sacred Valley Inca Sanctuary')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 6 Days / 5 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Peru</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.98 <span class="text-muted fw-normal">(76)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Sacred Valley Inca Sanctuary</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Nestled in Andean cloud forest near Machu Picchu citadel. Private luxury Hiram Bingham train salon carriage and shamans conducting spiritual retreats.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$4,400 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="col-lg-4 col-md-6 portfolio-item load-more-hidden d-none" data-region="europe" data-style="chalet" data-country="Iceland" data-city="Reykjavik">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=800&q=80" alt="Geothermal Sky Glass Lodge" />
+              <button class="btn-wishlist" onclick="toggleWishlist(this, 'Geothermal Sky Glass Lodge')" title="Save to Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <div class="dest-duration"><i class="fa-regular fa-clock text-warning"></i> 5 Days / 4 Nights</div>
+            </div>
+            <div class="card-body-dest">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="text-primary fw-bold small text-uppercase tracking-wide"><i class="fa-solid fa-location-dot me-1"></i> Iceland</span>
+                <span class="text-warning fw-bold small"><i class="fa-solid fa-star"></i> 4.97 <span class="text-muted fw-normal">(92)</span></span>
+              </div>
+              <h3 class="h4 fw-bold mb-2 text-dark">Geothermal Sky Glass Lodge</h3>
+              <p class="text-muted small mb-4 flex-grow-1 lh-base">
+                Remote glass ceiling lodge engineered for unpolluted Northern Lights viewing. Private geothermal basalt lagoon pool and superjeep glacial glacier tours.
+              </p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <div>
+                  <span class="text-muted small d-block">Starting price</span>
+                  <span class="fs-5 fw-extrabold text-dark">$5,100 <small class="text-muted fw-normal fs-6">/ person</small></span>
+                </div>
+                <a href="destination-details.html" class="btn btn-outline-primary rounded-pill px-4 py-2 small fw-semibold">
+                  Reserve <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Results State -->
+      <div class="text-center py-5 my-4 d-none" id="noResultsMsg">
+        <div class="display-1 text-muted mb-3"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3 class="fw-bold text-dark">No Sovereign Sanctuaries Found</h3>
+        <p class="text-muted max-w-md mx-auto">No destination buyouts match your specific parameters. Please broaden your filter selection or connect with our confidential desk.</p>
+        <button class="btn btn-primary rounded-pill px-5 py-3 mt-2 fw-semibold" onclick="resetFilters()">Reset All Filters</button>
+      </div>
+
+      <!-- 10. Load More Button -->
+      <div class="text-center mt-5 pt-4" id="loadMoreContainer">
+        <button type="button" class="btn-load-more" id="loadMoreBtn" onclick="triggerLoadMore()">
+          <span>Load More Sanctuaries</span>
+          <span class="badge bg-dark text-warning rounded-pill px-2 py-1 small" id="remainingBadge">+3 Available</span>
+          <i class="fa-solid fa-arrow-down small"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Popular Countries Section -->
+  <section class="py-5 bg-white border-top border-bottom" id="popular-countries">
+    <div class="container py-4">
+      <div class="row align-items-end mb-4" data-aos="fade-up">
+        <div class="col-lg-8">
+          <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">Sovereign Territories</span>
+          <h2 class="display-6 fw-bold mb-0">Popular Countries</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-2 mt-lg-0 text-muted small">
+          Click any territory to filter active portfolio
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Country 1: Switzerland -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('Switzerland')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91e3b99?auto=format&fit=crop&w=200&q=80" alt="Switzerland" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">Switzerland</h5>
+              <small class="text-muted">14 Sanctuaries</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Country 2: Maldives -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="150">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('Maldives')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=200&q=80" alt="Maldives" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">Maldives</h5>
+              <small class="text-muted">18 Atolls</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Country 3: Italy -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('Italy')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=200&q=80" alt="Italy" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">Italy</h5>
+              <small class="text-muted">22 Palazzos</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Country 4: Japan -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="250">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('Japan')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=200&q=80" alt="Japan" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">Japan</h5>
+              <small class="text-muted">12 Ryokans</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Country 5: Greece -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('Greece')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=200&q=80" alt="Greece" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">Greece</h5>
+              <small class="text-muted">16 Calderas</small>
+            </div>
+          </a>
+        </div>
+
+        <!-- Country 6: UAE -->
+        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="350">
+          <a href="#destination-grid" class="country-pill" onclick="filterByCountry('UAE')">
+            <div class="country-flag-wrap">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=200&q=80" alt="UAE" />
+            </div>
+            <div>
+              <h5 class="h6 fw-bold mb-0">UAE</h5>
+              <small class="text-muted">15 Residences</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Top Cities Hubs Section -->
+  <section class="py-5 my-3" id="top-cities">
+    <div class="container py-4">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-1">Global Aviation Centers</span>
+          <h2 class="display-6 fw-bold">Top Cities &amp; Diplomatic Desks</h2>
+          <p class="text-muted mt-2">Private charter dispatch terminals operating with 24/7 customs bypass.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <a href="#destination-grid" class="city-hub-card" onclick="searchInput.value='Tokyo'; filterPortfolio();">
+            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80" alt="Tokyo Hub" />
+            <div class="city-hub-overlay">
+              <span class="badge bg-primary w-auto align-self-start mb-2 px-3 py-1 rounded-pill small">Asia Hub</span>
+              <h4 class="h3 fw-bold mb-1">Tokyo</h4>
+              <p class="small text-light text-opacity-80 mb-0"><i class="fa-solid fa-plane-arrival me-1 text-warning"></i> Haneda VIP Salon</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <a href="#destination-grid" class="city-hub-card" onclick="searchInput.value='Dubai'; filterPortfolio();">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80" alt="Dubai Hub" />
+            <div class="city-hub-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-2 px-3 py-1 rounded-pill small fw-bold">Middle East Hub</span>
+              <h4 class="h3 fw-bold mb-1">Dubai</h4>
+              <p class="small text-light text-opacity-80 mb-0"><i class="fa-solid fa-plane-arrival me-1 text-warning"></i> Al Maktoum FBO</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <a href="#destination-grid" class="city-hub-card" onclick="searchInput.value='London'; filterPortfolio();">
+            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" alt="London Hub" />
+            <div class="city-hub-overlay">
+              <span class="badge bg-info text-dark w-auto align-self-start mb-2 px-3 py-1 rounded-pill small fw-bold">European Hub</span>
+              <h4 class="h3 fw-bold mb-1">London</h4>
+              <p class="small text-light text-opacity-80 mb-0"><i class="fa-solid fa-plane-arrival me-1 text-warning"></i> Farnborough Private</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <a href="#destination-grid" class="city-hub-card" onclick="searchInput.value='Monte Carlo'; filterPortfolio();">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="Monte Carlo Hub" />
+            <div class="city-hub-overlay">
+              <span class="badge bg-success w-auto align-self-start mb-2 px-3 py-1 rounded-pill small">Riviera Hub</span>
+              <h4 class="h3 fw-bold mb-1">Monte Carlo</h4>
+              <p class="small text-light text-opacity-80 mb-0"><i class="fa-solid fa-anchor me-1 text-warning"></i> Port Hercule Helipad</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Travel Types Section -->
+  <section class="py-5 bg-light border-top border-bottom" id="travel-types">
+    <div class="container py-4">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-1">Bespoke Curation</span>
+          <h2 class="display-6 fw-bold">Explore By Travel Type</h2>
+          <p class="text-muted mt-2">Every category engineered around strict privacy and sensory indulgence.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="#destination-grid" class="travel-type-card" onclick="styleSelect.value='island'; filterPortfolio();">
+            <div class="travel-type-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+            <h4 class="h4 fw-bold mb-2">Private Island Buyouts</h4>
+            <p class="text-muted small mb-0 lh-base">Complete marine isolation with private reef submarine fleets and unlisted nautical coordinates.</p>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="#destination-grid" class="travel-type-card" onclick="styleSelect.value='yacht'; filterPortfolio();">
+            <div class="travel-type-icon" style="background:rgba(0,191,166,0.1); color:var(--wl-secondary);"><i class="fa-solid fa-sailboat"></i></div>
+            <h4 class="h4 fw-bold mb-2">Superyacht Harbors</h4>
+            <p class="text-muted small mb-0 lh-base">Reserved deepwater berths in Monaco, Capri, and St. Barts with Riva tender dispatch.</p>
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <a href="#destination-grid" class="travel-type-card" onclick="styleSelect.value='chalet'; filterPortfolio();">
+            <div class="travel-type-icon" style="background:rgba(255,183,3,0.15); color:#d97706;"><i class="fa-solid fa-mountain-sun"></i></div>
+            <h4 class="h4 fw-bold mb-2">Alpine Helipad Chalets</h4>
+            <p class="text-muted small mb-0 lh-base">High-altitude fortified sanctuaries featuring geothermal spas and Olympic ski guides.</p>
+          </a>
+        </div>
+
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="#destination-grid" class="travel-type-card" onclick="styleSelect.value='safari'; filterPortfolio();">
+            <div class="travel-type-icon" style="background:rgba(239,68,68,0.1); color:#ef4444;"><i class="fa-solid fa-binoculars"></i></div>
+            <h4 class="h4 fw-bold mb-2">Deep Wilderness Safari Camps</h4>
+            <p class="text-muted small mb-0 lh-base max-w-lg mx-auto">Encrypted mobile canvas reserves tracking the Serengeti migration with private wildlife biologist attaches.</p>
+          </a>
+        </div>
+
+        <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+          <a href="#destination-grid" class="travel-type-card" onclick="styleSelect.value='heritage'; filterPortfolio();">
+            <div class="travel-type-icon" style="background:rgba(14,165,233,0.1); color:#0ea5e9;"><i class="fa-solid fa-castle"></i></div>
+            <h4 class="h4 fw-bold mb-2">Diplomatic Palace &amp; Heritage Estates</h4>
+            <p class="text-muted small mb-0 lh-base max-w-lg mx-auto">After-hours historical private buyouts including 11th-century Italian palazzos and Kyoto imperial tea pavilions.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Newsletter CTA Section -->
+  <section class="container" id="newsletter-cta">
+    <div class="newsletter-premium-box" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="position-relative z-2 max-w-3xl mx-auto text-center">
+        <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wider mb-3 shadow-sm">
+          <i class="fa-solid fa-envelope-open-text me-2"></i> Confidential Register
+        </span>
+        <h2 class="display-4 fw-bolder text-white mb-3">Join The Private Atelier Registry</h2>
+        <p class="lead text-light text-opacity-80 fs-5 mb-5 max-w-xl mx-auto fw-light">
+          Receive unlisted estate release notifications, private jet positioning manifests, and seasonal Virtuoso charter invitations.
+        </p>
+        
+        <form class="row g-2 justify-content-center max-w-xl mx-auto" onsubmit="event.preventDefault(); subscribeNewsletter();">
+          <div class="col-sm-8">
+            <input type="email" class="form-control py-3 px-4 rounded-pill border-0 shadow-sm" placeholder="Enter your confidential email address..." required id="newsletterEmailInput" />
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-warning w-100 py-3 rounded-pill fw-bold text-dark shadow">
+              Request Invitation
+            </button>
+          </div>
+        </form>
+        <span class="d-block mt-3 small text-light text-opacity-50"><i class="fa-solid fa-lock me-1 text-warning"></i> Zero spam. Statutory Swiss FADP data encryption guaranteed.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 fw-bold mb-3 d-block" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span>
+          </a>
+          <p class="text-light text-opacity-75 mb-4 pe-lg-4 lh-base">
+            The world's premier bespoke luxury travel atelier. Curating transformative expeditions, private jet circumnavigations, and superyacht charters since 2012.
+          </p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Top Sanctuaries</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="#destination-grid" class="text-light text-opacity-75 text-decoration-none" onclick="searchInput.value='Santorini'; filterPortfolio();">Santorini Caldera</a></li>
+            <li><a href="#destination-grid" class="text-light text-opacity-75 text-decoration-none" onclick="searchInput.value='Maldives'; filterPortfolio();">Baa Atoll Maldives</a></li>
+            <li><a href="#destination-grid" class="text-light text-opacity-75 text-decoration-none" onclick="searchInput.value='Kyoto'; filterPortfolio();">Kyoto Ryokan</a></li>
+            <li><a href="#destination-grid" class="text-light text-opacity-75 text-decoration-none" onclick="searchInput.value='Monte Carlo'; filterPortfolio();">Monte Carlo Marina</a></li>
+            <li><a href="#destination-grid" class="text-light text-opacity-75 text-decoration-none" onclick="searchInput.value='St. Moritz'; filterPortfolio();">St. Moritz Chalet</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Atelier Hierarchy</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="about.html" class="text-light text-opacity-75 text-decoration-none">Our Story &amp; Heritage</a></li>
+            <li><a href="tours.html" class="text-light text-opacity-75 text-decoration-none">Luxury Expeditions</a></li>
+            <li><a href="gallery.html" class="text-light text-opacity-75 text-decoration-none">Private Gallery</a></li>
+            <li><a href="blog.html" class="text-light text-opacity-75 text-decoration-none">Travel Journal</a></li>
+            <li><a href="faq.html" class="text-light text-opacity-75 text-decoration-none">Confidential FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">VIP Private Concierge</h5>
+          <p class="text-light text-opacity-75 mb-3 small lh-base">Available 24/7/365 for sovereign diplomatic missions and private jet dispatch.</p>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fa-solid fa-phone-volume fs-4 text-warning me-3"></i>
+            <div>
+              <span class="small text-muted d-block">Direct Global Hotline</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-envelope-open-text fs-4 text-info me-3"></i>
+            <div>
+              <span class="small text-muted d-block">Private Dispatch Desk</span>
+              <a href="mailto:vip@wanderluxe.com" class="fw-bold text-white text-decoration-none">vip@wanderluxe.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Atelier Inc. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Wishlist Toast Notification -->
+  <div class="wishlist-toast" id="wishlistToast">
+    <i class="fa-solid fa-heart text-danger fs-5"></i>
+    <div>
+      <span class="fw-bold d-block" id="toastTitle">Saved to Wishlist</span>
+      <small class="text-light text-opacity-75">Accessible via your private member dossier.</small>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- ThemeForest Interactive JavaScript -->
+  <script>
+    // 1. Portfolio Filter System
+    function filterPortfolio() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const region = document.getElementById('regionSelect').value;
+      const style = document.getElementById('styleSelect').value;
+      const items = document.querySelectorAll('.portfolio-item');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+      const visibleCountElem = document.getElementById('visibleCount');
+      const currentShowingElem = document.getElementById('currentShowingCount');
+      
+      let count = 0;
+
+      items.forEach(item => {
+        const title = item.querySelector('h3').textContent.toLowerCase();
+        const desc = item.querySelector('.card-body-dest p').textContent.toLowerCase();
+        const country = (item.getAttribute('data-country') || '').toLowerCase();
+        const city = (item.getAttribute('data-city') || '').toLowerCase();
+        const itemRegion = item.getAttribute('data-region');
+        const itemStyle = item.getAttribute('data-style');
+
+        const matchQ = !q || title.includes(q) || desc.includes(q) || country.includes(q) || city.includes(q);
+        const matchRegion = region === 'all' || itemRegion === region;
+        const matchStyle = style === 'all' || itemStyle === style;
+
+        if (matchQ && matchRegion && matchStyle) {
+          // If it was hidden purely by load more initially, keep it hidden unless load more was triggered
+          if (!item.classList.contains('load-more-hidden') || window.loadMoreRevealed) {
+            item.classList.remove('d-none');
+            count++;
+          } else {
+            // Keep hidden if load more hasn't been pressed
+            item.classList.add('d-none');
+          }
+        } else {
+          item.classList.add('d-none');
+        }
+      });
+
+      if (count === 0) {
+        noResultsMsg.classList.remove('d-none');
+      } else {
+        noResultsMsg.classList.add('d-none');
+      }
+      
+      if (visibleCountElem) visibleCountElem.textContent = count;
+      if (currentShowingElem) currentShowingElem.textContent = count;
+    }
+
+    // Filter Chips Sync
+    function selectChip(chip) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const region = chip.getAttribute('data-region');
+      document.getElementById('regionSelect').value = region;
+      filterPortfolio();
+    }
+
+    function syncChipFromSelect() {
+      const val = document.getElementById('regionSelect').value;
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        if (c.getAttribute('data-region') === val) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+    }
+
+    function filterByCountry(countryName) {
+      document.getElementById('searchInput').value = countryName;
+      document.getElementById('regionSelect').value = 'all';
+      document.getElementById('styleSelect').value = 'all';
+      syncChipFromSelect();
+      filterPortfolio();
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('regionSelect').value = 'all';
+      document.getElementById('styleSelect').value = 'all';
+      syncChipFromSelect();
+      filterPortfolio();
+    }
+
+    // 2. Wishlist Toggle Protocol
+    function toggleWishlist(btn, sanctuaryName) {
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      const toast = document.getElementById('wishlistToast');
+      const toastTitle = document.getElementById('toastTitle');
+
+      if (btn.classList.contains('active')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid', 'text-danger');
+        toastTitle.textContent = `"${sanctuaryName}" Saved to Wishlist`;
+      } else {
+        icon.classList.remove('fa-solid', 'text-danger');
+        icon.classList.add('fa-regular');
+        toastTitle.textContent = `Removed from Wishlist`;
+      }
+
+      toast.classList.add('show');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    // 3. Load More Trigger
+    function triggerLoadMore() {
+      const btn = document.getElementById('loadMoreBtn');
+      btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status"></span> Unlocking Vault...`;
+      
+      setTimeout(() => {
+        window.loadMoreRevealed = true;
+        document.querySelectorAll('.load-more-hidden').forEach(el => {
+          el.classList.remove('load-more-hidden', 'd-none');
+          el.setAttribute('data-aos', 'fade-up');
+        });
+        
+        // Hide button or update
+        document.getElementById('loadMoreContainer').innerHTML = `
+          <div class="d-inline-flex align-items-center gap-2 px-4 py-3 rounded-pill bg-dark text-white fw-semibold small shadow-sm">
+            <i class="fa-solid fa-check-circle text-success"></i> All 12 Sovereign Sanctuaries Unlocked
+          </div>
+        `;
+        
+        filterPortfolio();
+        AOS.refresh();
+      }, 700);
+    }
+
+    // 4. Newsletter Subscription Alert
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletterEmailInput').value;
+      const toast = document.getElementById('wishlistToast');
+      const toastTitle = document.getElementById('toastTitle');
+      
+      toastTitle.textContent = `Atelier Register Confirmed`;
+      toast.querySelector('small').textContent = `Invitation dispatched to ${email}`;
+      toast.classList.add('show');
+      document.getElementById('newsletterEmailInput').value = '';
+      
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+  </script>
+</body>
+</html>

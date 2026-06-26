@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About WanderLuxe Atelier - Sovereign Luxury Travel & Expeditions</title>
+  <meta name="description" content="Discover the heritage, mission, vision, and master curators behind WanderLuxe, the world's premier bespoke luxury travel atelier and private jet charter agency." />
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper JS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    :root {
+      --wl-primary: #0C6EFD;
+      --wl-secondary: #00BFA6;
+      --wl-accent: #FFB703;
+      --wl-dark: #0f172a;
+      --wl-slate: #1e293b;
+      --wl-border: rgba(15, 23, 42, 0.08);
+      --wl-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #334155;
+      overflow-x: hidden;
+      background-color: #f8fafc;
+    }
+
+    /* Typography Upgrades */
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      letter-spacing: -0.025em;
+      color: var(--wl-dark);
+    }
+    .text-accent { color: var(--wl-accent) !important; }
+    .bg-dark-slate { background-color: var(--wl-dark) !important; }
+
+    /* Hero Banner & Breadcrumb */
+    .page-hero {
+      position: relative;
+      height: 65vh;
+      min-height: 520px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.88) 100%), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: linear-gradient(to top, #f8fafc, transparent);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 40px;
+    }
+    .breadcrumb-custom {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 10px 24px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .breadcrumb-custom a {
+      color: var(--wl-accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--wl-transition);
+    }
+    .breadcrumb-custom a:hover { color: white; }
+    .breadcrumb-custom span { color: rgba(255,255,255,0.6); margin: 0 12px; font-size: 0.85rem; }
+    .breadcrumb-custom .active { color: white; font-weight: 600; font-size: 0.95rem; }
+
+    /* Premium Story Section */
+    .story-img-wrapper {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(15,23,42,0.18);
+    }
+    .story-img-wrapper img {
+      transition: transform 0.8s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .story-img-wrapper:hover img { transform: scale(1.05); }
+    .story-badge-card {
+      position: absolute;
+      bottom: 35px;
+      right: 35px;
+      background: rgba(15,23,42,0.92);
+      backdrop-filter: blur(16px);
+      color: white;
+      padding: 24px 30px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      max-width: 260px;
+    }
+    .quote-box {
+      border-left: 4px solid var(--wl-accent);
+      background: white;
+      padding: 24px 28px;
+      border-radius: 0 20px 20px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    /* Philosophy, Mission & Vision Cards */
+    .mv-card {
+      padding: 48px 40px;
+      border-radius: 28px;
+      background: white;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 15px 40px rgba(15,23,42,0.04);
+      height: 100%;
+      transition: var(--wl-transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .mv-card::top {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--wl-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--wl-transition);
+    }
+    .mv-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(15,23,42,0.1);
+      border-color: rgba(12,110,253,0.3);
+    }
+    .mv-card:hover::top { transform: scaleX(1); }
+    .mv-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(12,110,253,0.1), rgba(12,110,253,0.02));
+      color: var(--wl-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 28px;
+      transition: var(--wl-transition);
+    }
+    .mv-card:hover .mv-icon {
+      background: var(--wl-primary);
+      color: white;
+      transform: rotate(5deg) scale(1.08);
+    }
+
+    /* Core Values Bento Grid */
+    .value-box {
+      background: white;
+      padding: 36px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--wl-border);
+      height: 100%;
+      transition: var(--wl-transition);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .value-box:hover {
+      background: var(--wl-dark);
+      color: white !important;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(15,23,42,0.15);
+    }
+    .value-box:hover h4, .value-box:hover p { color: white !important; }
+    .value-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: rgba(255,183,3,0.15);
+      color: #d97706;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      transition: var(--wl-transition);
+    }
+    .value-box:hover .value-icon {
+      background: var(--wl-accent);
+      color: var(--wl-dark);
+    }
+
+    /* Achievements Banner */
+    .achievements-band {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 90px 0;
+      border-radius: 36px;
+      margin: 80px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(15,23,42,0.25);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .achievements-band::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(12,110,253,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .stat-counter {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFB703, #FFE89C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    /* Why Travel With Us Icon Boxes */
+    .feature-card {
+      background: white;
+      padding: 40px 32px;
+      border-radius: 28px;
+      border: 1px solid var(--wl-border);
+      text-align: center;
+      height: 100%;
+      transition: var(--wl-transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+      border-color: var(--wl-secondary);
+    }
+    .feature-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: rgba(0,191,166,0.1);
+      color: var(--wl-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      transition: var(--wl-transition);
+    }
+    .feature-card:hover .feature-icon-wrapper {
+      background: var(--wl-secondary);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* Timeline Protocol */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
+    }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #cbd5e1;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 991.98px) {
+      .timeline-container::before { left: 24px; }
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--wl-dark);
+      border: 4px solid white;
+      box-shadow: 0 0 0 4px rgba(12,110,253,0.2);
+      color: var(--wl-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    @media (max-width: 991.98px) {
+      .timeline-dot { left: 24px; }
+    }
+    .timeline-content-card {
+      background: white;
+      padding: 36px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+      transition: var(--wl-transition);
+    }
+    .timeline-content-card:hover {
+      border-color: var(--wl-primary);
+      box-shadow: 0 20px 40px rgba(15,23,42,0.1);
+    }
+
+    /* Expert Team Curators */
+    .team-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--wl-border);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+      text-align: center;
+      transition: var(--wl-transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(15,23,42,0.14);
+    }
+    .team-thumb {
+      position: relative;
+      height: 360px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    .team-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .team-card:hover .team-thumb img { transform: scale(1.08); }
+    .team-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15,23,42,0.7) 0%, transparent 60%);
+      opacity: 0;
+      transition: var(--wl-transition);
+    }
+    .team-card:hover .team-overlay { opacity: 1; }
+    .team-socials {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 3;
+    }
+    .team-card:hover .team-socials { opacity: 1; transform: translateY(0); }
+    .team-socials a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: white;
+      color: var(--wl-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: var(--wl-transition);
+    }
+    .team-socials a:hover { background: var(--wl-primary); color: white; transform: scale(1.15); }
+
+    /* Awards & Customer Stats */
+    .award-card {
+      background: white;
+      border: 1px solid var(--wl-border);
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      height: 100%;
+      transition: var(--wl-transition);
+    }
+    .award-card:hover {
+      border-color: var(--wl-accent);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(255,183,3,0.12);
+    }
+    .award-icon {
+      font-size: 44px;
+      color: #d97706;
+      margin-bottom: 16px;
+    }
+    .progress-custom {
+      height: 10px;
+      border-radius: 10px;
+      background-color: #e2e8f0;
+      overflow: hidden;
+    }
+    .progress-bar-custom {
+      background: linear-gradient(90deg, #0C6EFD, #00BFA6);
+      border-radius: 10px;
+      transition: width 1.5s ease-in-out;
+    }
+
+    /* Premium Call To Action Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      padding: 110px 40px;
+      color: white;
+      text-align: center;
+      border-radius: 36px;
+      margin-bottom: 90px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 30px 70px rgba(15,23,42,0.3);
+    }
+    .cta-banner::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      bottom: -30%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,183,3,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .btn-wl-accent {
+      background: linear-gradient(135deg, #FFB703, #FFA000);
+      color: #0f172a;
+      font-weight: 700;
+      padding: 18px 44px;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 0 10px 25px rgba(255,183,3,0.35);
+      transition: var(--wl-transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .btn-wl-accent:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 35px rgba(255,183,3,0.45);
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-location-dot me-1"></i> New York &bull; London &bull; Tokyo &bull; Dubai</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+              <li><a class="dropdown-item" href="#">GBP (&pound;)</a></li>
+            </ul>
+          </div>
+          <span class="top-divider">|</span>
+          <div class="social-top ms-2">
+            <a href="#" class="me-2 text-white text-opacity-75 text-decoration-none" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="me-2 text-white text-opacity-75 text-decoration-none" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white text-opacity-75 text-decoration-none" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar shadow-sm sticky-top bg-white" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand fs-3 fw-bold" href="index.html">
+        Wander<span class="text-primary">Luxe</span><span class="brand-dot text-warning">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active text-primary" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tours.html" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold shadow-sm d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-compass"></i> Book Your Trip
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white fs-3 fw-bold" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house me-3 text-primary"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="destinations.html"><i class="fa-solid fa-earth-americas me-3 text-info"></i> Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tours.html"><i class="fa-solid fa-suitcases me-3 text-warning"></i> Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white active text-primary" href="about.html"><i class="fa-solid fa-gem me-3 text-danger"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html"><i class="fa-solid fa-images me-3 text-success"></i> Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html"><i class="fa-solid fa-book-open me-3 text-primary"></i> Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html"><i class="fa-solid fa-circle-question me-3 text-info"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i class="fa-solid fa-envelope me-3 text-warning"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1. Hero Banner & 2. Breadcrumb -->
+  <section class="page-hero" id="hero-banner">
+    <div class="container page-hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wider mb-3 shadow-sm">
+        <i class="fa-solid fa-crown me-2"></i> Sovereign Travel Atelier
+      </span>
+      <h1 class="display-3 fw-bolder text-white mb-3">Atelier &amp; Heritage</h1>
+      <p class="lead max-w-2xl mx-auto text-light text-opacity-85 fs-4 fw-light">
+        Architecting confidential private jet circumnavigations and bespoke superyacht buyouts since 2012.
+      </p>
+      
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-custom shadow-sm">
+        <a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a>
+        <span>/</span>
+        <span class="active">About WanderLuxe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Company Story Section -->
+  <section class="py-5 my-4" id="company-story">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <div class="story-img-wrapper" style="height: 520px;">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" alt="Private Jet Salon Lounge" />
+            <div class="story-badge-card d-none d-sm-block">
+              <span class="text-warning fw-bolder d-block fs-3 mb-1">14+ Years</span>
+              <p class="small text-light text-opacity-85 mb-0 lh-sm">Of unlisted diplomatic estate buyouts &amp; private jet dispatch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary fw-bold small text-uppercase mb-3">
+            <i class="fa-solid fa-compass-drafting"></i> Company Story
+          </div>
+          <h2 class="display-5 fw-bold mb-4">Redefining the Art of Sovereign Exploration</h2>
+          <p class="text-muted fs-5 lh-base mb-4">
+            Founded in Manhattan in 2012 by seasoned diplomatic attaches and private aviation connoisseurs, WanderLuxe emerged from an uncompromising philosophy: true luxury is absolute physical privacy, rarity of access, and unscripted discovery.
+          </p>
+          <p class="text-muted lh-base mb-4">
+            We bypass standard commercial channels to commission unlisted caldera estates in Santorini, private Sikorsky helipad transfers across the St. Moritz peaks, and exclusive after-hours private buyouts of the Sistine Chapel. Every voyage is engineered around your personal security protocols and circadian rhythms.
+          </p>
+
+          <!-- Quote & Founder Signature -->
+          <div class="quote-box my-4">
+            <p class="fst-italic text-dark fw-medium mb-3">
+              "We do not sell packaged holidays. We curate air-gapped sanctuaries and seamless time corridors for those who move the world."
+            </p>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+              <div class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-signature fs-1 text-primary"></i>
+                <div>
+                  <h5 class="mb-0 fw-bold">Alexander Vance</h5>
+                  <small class="text-muted">Founder &amp; Managing Partner</small>
+                </div>
+              </div>
+              <span class="badge bg-dark px-3 py-2 rounded-pill"><i class="fa-solid fa-shield-halved me-1 text-warning"></i> Diplomatic Registry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Our Mission, 5. Our Vision, 6. Core Values Section -->
+  <section class="py-5 bg-white border-top border-bottom" id="mission-vision-values">
+    <div class="container py-5">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-2">Philosophy &amp; Standards</span>
+          <h2 class="display-5 fw-bold">Driven by Perfection</h2>
+          <p class="text-muted fs-5 mt-2">Our foundational pillars governing every private charter and estate commissioning.</p>
+        </div>
+      </div>
+
+      <!-- Mission & Vision Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="mv-card">
+            <div class="mv-icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill small fw-bold mb-3">Pillar I</span>
+            <h3 class="h2 fw-bold mb-3">Our Mission</h3>
+            <p class="text-muted fs-5 lh-base mb-0">
+              To curate ultra-exclusive, zero-friction travel corridors that honor our clients' most irreplaceable asset: time. We guarantee air-gapped confidentiality, pristine private aviation logistics, and hyper-personalized hospitality anywhere on Earth.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="mv-card">
+            <div class="mv-icon" style="background: rgba(0,191,166,0.1); color: var(--wl-secondary);"><i class="fa-solid fa-eye"></i></div>
+            <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 rounded-pill small fw-bold mb-3">Pillar II</span>
+            <h3 class="h2 fw-bold mb-3">Our Vision</h3>
+            <p class="text-muted fs-5 lh-base mb-0">
+              To establish the definitive sovereign benchmark for regenerative ultra-luxury tourism—fostering profound cultural enlightenment while safeguarding remote marine sanctuaries and unblemished indigenous ecosystems for future generations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Core Values Bento Grid -->
+      <div class="row g-4 pt-3">
+        <div class="col-12 text-center mb-2" data-aos="fade-up">
+          <h3 class="h4 fw-bold text-dark">Our Uncompromising Core Values</h3>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="value-box">
+            <div class="value-icon"><i class="fa-solid fa-user-lock"></i></div>
+            <div>
+              <h4 class="h5 fw-bold mb-2">Absolute Privacy</h4>
+              <p class="text-muted small mb-0 lh-sm">Encrypted manifests and strict non-disclosure agreements across all staff.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="value-box">
+            <div class="value-icon"><i class="fa-solid fa-gem"></i></div>
+            <div>
+              <h4 class="h5 fw-bold mb-2">Rarity of Access</h4>
+              <p class="text-muted small mb-0 lh-sm">Unlocking closed historical vaults and unlisted private island buyouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="value-box">
+            <div class="value-icon"><i class="fa-solid fa-compass"></i></div>
+            <div>
+              <h4 class="h5 fw-bold mb-2">White-Glove Precision</h4>
+              <p class="text-muted small mb-0 lh-sm">24/7 dedicated private dispatch managing real-time weather and flight routing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="value-box">
+            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div>
+              <h4 class="h5 fw-bold mb-2">Regenerative Luxury</h4>
+              <p class="text-muted small mb-0 lh-sm">Direct institutional funding toward coral restoration and wildlife preservation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Achievements Section (Animated Counters) -->
+  <section class="container" id="achievements">
+    <div class="achievements-band px-4 px-lg-5" data-aos="fade-up">
+      <div class="row g-4 text-center align-items-center position-relative z-2">
+        <div class="col-6 col-lg-3">
+          <div class="stat-counter counter-number" data-target="450">$450M+</div>
+          <div class="text-light text-opacity-80 fs-5 mt-2 fw-medium">Charter Commissioning</div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-counter counter-number" data-target="3500">3,500+</div>
+          <div class="text-light text-opacity-80 fs-5 mt-2 fw-medium">Sovereign &amp; VIP Clients</div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-counter counter-number" data-target="120">120+</div>
+          <div class="text-light text-opacity-80 fs-5 mt-2 fw-medium">Private Island Sanctuaries</div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-counter counter-number" data-target="28">28</div>
+          <div class="text-light text-opacity-80 fs-5 mt-2 fw-medium">Global Virtuoso Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Why Travel With Us Section -->
+  <section class="py-5 my-4" id="why-travel-with-us">
+    <div class="container py-4">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-secondary fw-bold tracking-wider small d-block mb-2">The WanderLuxe Advantage</span>
+          <h2 class="display-5 fw-bold">Why Sovereign Voyagers Trust Our Atelier</h2>
+          <p class="text-muted fs-5 mt-2">Unrivaled institutional reach paired with discreet private execution.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-plane-up"></i></div>
+            <h4 class="h5 fw-bold mb-3">Unlisted FBO Terminals</h4>
+            <p class="text-muted small mb-0 lh-base">
+              Non-stop landing clearance at 4,000+ audited private VIP tarmac terminals globally, completely bypassing public airport terminals.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper" style="background:rgba(255,183,3,0.15); color:#d97706;"><i class="fa-solid fa-utensils"></i></div>
+            <h4 class="h5 fw-bold mb-3">Michelin Gastronomy</h4>
+            <p class="text-muted small mb-0 lh-base">
+              Private preference interviews conducted 4 weeks prior to departure to provision rare vintage cellars and personalized daily degustations.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper" style="background:rgba(12,110,253,0.1); color:var(--wl-primary);"><i class="fa-solid fa-user-shield"></i></div>
+            <h4 class="h5 fw-bold mb-3">Executive Close Protection</h4>
+            <p class="text-muted small mb-0 lh-base">
+              Discreet security officers (former UK SAS / US Secret Service) and Johns Hopkins ER physicians accompanying global expeditions 24/7.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper" style="background:rgba(239,68,68,0.1); color:#ef4444;"><i class="fa-solid fa-server"></i></div>
+            <h4 class="h5 fw-bold mb-3">Air-Gapped Swiss Privacy</h4>
+            <p class="text-muted small mb-0 lh-base">
+              Client dossiers and financial settlements encrypted under Swiss FADP data vaults with statutory cryptographic destruction upon request.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Travel Experience Timeline Section -->
+  <section class="py-5 bg-light border-top border-bottom" id="travel-timeline">
+    <div class="container py-5">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-2">Bespoke Protocol</span>
+          <h2 class="display-5 fw-bold">The Curation Timeline</h2>
+          <p class="text-muted fs-5 mt-2">How your confidential itinerary progresses from private proposal to tarmac touchdown.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="timeline-container">
+            
+            <!-- Step 01 -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot">01</div>
+              <div class="row">
+                <div class="col-lg-6 ms-auto ps-lg-5">
+                  <div class="timeline-content-card">
+                    <span class="badge bg-dark text-warning mb-2 px-3 py-1 rounded-pill small fw-bold">Week 1 &bull; Initiation</span>
+                    <h4 class="h4 fw-bold mb-2">Confidential Preference Dispatch</h4>
+                    <p class="text-muted mb-0 lh-base">
+                      Transmission of your encrypted inquiry. Execution of mutual non-disclosure agreements followed by a private consultation with managing partners to establish desired flight corridors, villa security sweeps, and culinary dossiers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot">02</div>
+              <div class="row">
+                <div class="col-lg-6 me-auto pe-lg-5 text-lg-end">
+                  <div class="timeline-content-card text-start text-lg-end">
+                    <span class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-1 rounded-pill small fw-bold">Week 2-3 &bull; Architecture</span>
+                    <h4 class="h4 fw-bold mb-2">Architectural Blueprint &amp; Buyouts</h4>
+                    <p class="text-muted mb-0 lh-base">
+                      Our European and Asia-Pacific desks commission closed resort buyouts, secure unlisted ICAO transponder hex codes for aviation tracking suppression, and coordinate private yacht moorage reservations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot">03</div>
+              <div class="row">
+                <div class="col-lg-6 ms-auto ps-lg-5">
+                  <div class="timeline-content-card">
+                    <span class="badge bg-success bg-opacity-10 text-success mb-2 px-3 py-1 rounded-pill small fw-bold">Day 0 &bull; Embarkation</span>
+                    <h4 class="h4 fw-bold mb-2">White-Glove VIP Tarmac Boarding</h4>
+                    <p class="text-muted mb-0 lh-base">
+                      Chauffeured armored motorcade arrival directly at private FBO tarmac. Zero airport security lines. Immediate welcome aboard our Boeing 757 or Gulfstream flagship by executive captains and private onboard sommelier.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-dot"><i class="fa-solid fa-flag-checkered fs-6"></i></div>
+              <div class="row">
+                <div class="col-lg-6 me-auto pe-lg-5 text-lg-end">
+                  <div class="timeline-content-card text-start text-lg-end">
+                    <span class="badge bg-warning text-dark mb-2 px-3 py-1 rounded-pill small fw-bold">Voyage Execution</span>
+                    <h4 class="h4 fw-bold mb-2">Sovereign Discovery &amp; Telemetry</h4>
+                    <p class="text-muted mb-0 lh-base">
+                      Seamless unscripted exploration. 24/7 shadow concierge monitoring satellite weather uplinks to dynamically adjust yacht or flight trajectories, ensuring perpetual sun and absolute tranquility.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Our Expert Team Section -->
+  <section class="py-5 my-5" id="expert-team">
+    <div class="container py-4">
+      <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto">
+          <span class="text-uppercase text-primary fw-bold tracking-wider small d-block mb-2">The Atelier Concierge</span>
+          <h2 class="display-5 fw-bold">Meet Our Master Curators</h2>
+          <p class="text-muted fs-5 mt-2">Multilingual aviation specialists, private yacht captains, and Michelin gastronomy advisors.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Curator 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card">
+            <div class="team-thumb">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" />
+              <div class="team-overlay"></div>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="contact.html" aria-label="Email Dispatch"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-center">
+              <h5 class="fw-bold mb-1 text-dark fs-5">Elena Rostova</h5>
+              <span class="text-primary small fw-semibold d-block mb-2">Head of European Estates</span>
+              <p class="text-muted small mb-0">Specializes in unlisted Italian Amalfi villas and French Riviera yacht moorings.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curator 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card">
+            <div class="team-thumb">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Marcus Sterling" />
+              <div class="team-overlay"></div>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="contact.html" aria-label="Direct Phone"><i class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-center">
+              <h5 class="fw-bold mb-1 text-dark fs-5">Marcus Sterling</h5>
+              <span class="text-primary small fw-semibold d-block mb-2">Director of Private Aviation</span>
+              <p class="text-muted small mb-0">Oversees global Boeing 757 expeditions and bespoke alpine helipad charters.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curator 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card">
+            <div class="team-thumb">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Sophia Chen" />
+              <div class="team-overlay"></div>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="contact.html" aria-label="Email Dispatch"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-center">
+              <h5 class="fw-bold mb-1 text-dark fs-5">Sophia Chen</h5>
+              <span class="text-primary small fw-semibold d-block mb-2">Asia-Pacific Expedition Lead</span>
+              <p class="text-muted small mb-0">Expert in secluded Kyoto imperial rooms and private Maldivian atoll buyouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curator 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-card">
+            <div class="team-thumb">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="David Al-Mansoor" />
+              <div class="team-overlay"></div>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="contact.html" aria-label="Direct Phone"><i class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-center">
+              <h5 class="fw-bold mb-1 text-dark fs-5">David Al-Mansoor</h5>
+              <span class="text-primary small fw-semibold d-block mb-2">Safari &amp; Sanctuary Advisor</span>
+              <p class="text-muted small mb-0">Curates private conservation buyouts across Serengeti and desert reserves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Awards & Certifications & 12. Customer Satisfaction Statistics Section -->
+  <section class="py-5 bg-white border-top border-bottom" id="awards-stats-section">
+    <div class="container py-4">
+      <div class="row g-5 align-items-center">
+        
+        <!-- Left Column: Awards & Certifications -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="text-uppercase text-accent fw-bold tracking-wider small d-block mb-2">Independent Audits</span>
+          <h2 class="display-6 fw-bold mb-3">Awards &amp; Certifications</h2>
+          <p class="text-muted mb-4">
+            WanderLuxe holds the highest independent aviation safety and ultraluxe hospitality accreditations worldwide.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="award-card">
+                <div class="award-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <h5 class="fw-bold mb-1">ARGUS Platinum</h5>
+                <p class="small text-muted mb-0">Highest audited private aviation safety rating globally.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="award-card">
+                <div class="award-icon"><i class="fa-solid fa-plane-circle-check"></i></div>
+                <h5 class="fw-bold mb-1">Wyvern Wingman</h5>
+                <p class="small text-muted mb-0">Certified rigorous pilot experience and maintenance audit.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="award-card">
+                <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+                <h5 class="fw-bold mb-1">Virtuoso Ultraluxe</h5>
+                <p class="small text-muted mb-0">Invited top 1% institutional luxury travel atelier agency.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="award-card">
+                <div class="award-icon"><i class="fa-solid fa-star"></i></div>
+                <h5 class="fw-bold mb-1">Condé Nast Gold List</h5>
+                <p class="small text-muted mb-0">Voted #1 Private Jet Expedition Designer 2024 &amp; 2025.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Customer Satisfaction Statistics -->
+        <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+          <div class="p-4 p-md-5 rounded-4 bg-light border shadow-sm">
+            <span class="badge bg-dark text-white px-3 py-1 rounded-pill small fw-bold mb-3">Audited Metrics</span>
+            <h3 class="h3 fw-bold mb-4">Customer Satisfaction Statistics</h3>
+            
+            <!-- Stat 1 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold text-dark"><i class="fa-solid fa-clock text-primary me-2"></i> On-Time Private Aviation Departures</span>
+                <span class="fw-extrabold text-primary font-mono">99.8%</span>
+              </div>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 99.8%;"></div>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold text-dark"><i class="fa-solid fa-lock text-success me-2"></i> NDA &amp; Client Privacy Maintenance</span>
+                <span class="fw-extrabold text-success font-mono">100%</span>
+              </div>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold text-dark"><i class="fa-solid fa-rotate text-info me-2"></i> Repeat Client Commissioning Rate</span>
+                <span class="fw-extrabold text-info font-mono">98.5%</span>
+              </div>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 98.5%;"></div>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="mb-0">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="fw-bold text-dark"><i class="fa-solid fa-heart text-danger me-2"></i> Sovereign Guest Satisfaction Score</span>
+                <span class="fw-extrabold text-danger font-mono">4.98 / 5.0</span>
+              </div>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 99.6%;"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Call To Action Section -->
+  <section class="container my-5 pt-3" id="cta-section">
+    <div class="cta-banner" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="position-relative z-2 max-w-3xl mx-auto">
+        <span class="badge bg-warning text-dark px-4 py-2 rounded-pill fw-bold text-uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-compass me-1"></i> Direct Confidential Dispatch
+        </span>
+        <h2 class="display-4 fw-bolder text-white mb-4">Begin Your Bespoke Journey</h2>
+        <p class="lead text-light text-opacity-80 fs-4 fw-light mb-5 max-w-xl mx-auto">
+          Connect with our senior private travel designers to commission your confidential global expedition.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+          <a href="contact.html" class="btn-wl-accent">
+            <i class="fa-solid fa-paper-plane"></i> Schedule Private Consultation
+          </a>
+          <a href="tel:+1800888LUXE" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold fs-6 d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone"></i> +1 (800) 888-LUXE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 fw-bold mb-3 d-block" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span>
+          </a>
+          <p class="text-light text-opacity-75 mb-4 pe-lg-4 lh-base">
+            The world's premier bespoke luxury travel atelier. Curating transformative expeditions, private jet circumnavigations, and superyacht charters since 2012.
+          </p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Sanctuaries</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Baa Atoll, Maldives</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Santorini Caldera</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Kyoto Imperial Rooms</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">St. Barthélemy Estates</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Navigation</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light text-opacity-75 text-decoration-none">Our Heritage &amp; Atelier</a></li>
+            <li><a href="tours.html" class="text-light text-opacity-75 text-decoration-none">Expedition Packages</a></li>
+            <li><a href="gallery.html" class="text-light text-opacity-75 text-decoration-none">Visual Showcase</a></li>
+            <li><a href="blog.html" class="text-light text-opacity-75 text-decoration-none">Travel Journal</a></li>
+            <li><a href="faq.html" class="text-light text-opacity-75 text-decoration-none">Private FAQ</a></li>
+            <li><a href="contact.html" class="text-light text-opacity-75 text-decoration-none">Contact Dispatch</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">VIP Private Concierge</h5>
+          <p class="text-light text-opacity-75 mb-3 small">Available 24/7/365 for sovereign members and bespoke inquiries.</p>
+          <div class="d-flex align-items-center mb-4">
+            <i class="fa-solid fa-phone-volume fs-3 text-warning me-3"></i>
+            <div>
+              <span class="small text-muted d-block">Direct Global Hotline</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+          <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-center">
+            <span class="small text-warning fw-bold d-block mb-1">Encrypted Aviation Desk</span>
+            <span class="font-mono text-light text-opacity-90">vip@wanderluxe.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Atelier Inc. All rights reserved. Bonded under ARGUS Platinum.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Concierge Dispatch & Contact - WanderLuxe Atelier</title>
+  <meta name="description" content="Initiate a confidential travel inquiry or schedule a private consultation with WanderLuxe's senior itinerary architects across New York, London, Tokyo, and Dubai." />
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Animate On Scroll (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Custom Theme Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-compass"></div>
+    <div class="loader-text">WANDERLUXE</div>
+  </div>
+
+  <!-- Top Bar Header -->
+  <div class="header-top d-none d-md-block" id="top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 top-contact">
+          <span class="me-3"><i class="fa-solid fa-phone me-2 text-warning"></i> +1 (800) 888-LUXE</span>
+          <span class="top-divider">|</span>
+          <span class="ms-1"><i class="fa-solid fa-envelope me-2 text-info"></i> vip@wanderluxe.com</span>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center top-links">
+          <span class="me-3"><i class="fa-solid fa-location-dot me-1"></i> New York &bull; London &bull; Tokyo &bull; Dubai</span>
+          <span class="top-divider">|</span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown">USD ($)</a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow">
+              <li><a class="dropdown-item active" href="#">USD ($)</a></li>
+              <li><a class="dropdown-item" href="#">EUR (&euro;)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navigation -->
+  <nav class="navbar navbar-expand-lg main-navbar" id="main-navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        Wander<span>Luxe</span><span class="brand-dot">.</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <i class="fa-solid fa-bars-staggered fs-3 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="desktopMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Luxury Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tours.html" class="btn-wl-primary">
+            <i class="fa-solid fa-compass me-1"></i> Book Your Trip
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom bg-dark text-white" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-4">
+      <a class="navbar-brand text-white" href="index.html">Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span></a>
+      <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body pt-4">
+      <ul class="navbar-nav fs-5 gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Journal</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="page-hero" id="hero-banner" style="background: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1920&q=80') center/cover;">
+    <div class="container page-hero-content" data-aos="fade-up">
+      <span class="badge bg-primary px-4 py-2 rounded-pill mb-3"><i class="fa-solid fa-lock me-1"></i> Encrypted Client Channel</span>
+      <h1 class="display-3 fw-bold mb-3">Private Client Dispatch</h1>
+      <p class="lead max-w-2xl mx-auto text-light text-opacity-80">Connect directly with our senior executive partners for unlisted aircraft charters and bespoke resort buyouts.</p>
+      <div class="breadcrumb-custom">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="active">Contact Atelier</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Contact Section -->
+  <section class="py-5 my-3" id="contact-main-section">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Column: Coordinates -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="text-primary text-uppercase tracking-wider fw-bold small d-block mb-2">Global Sanctuaries</span>
+          <h2 class="h2 fw-bold mb-4">Atelier Headquarters</h2>
+          <p class="text-muted mb-5">Our private client rooms are open strictly by appointment. For emergency aviation dispatch or immediate superyacht charter commissioning, our 24/7 global telephone hotline is routed directly to senior partners.</p>
+
+          <div class="d-flex flex-column gap-4">
+            
+            <div class="d-flex gap-4 p-4 bg-light rounded-4 border">
+              <div class="btn btn-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:56px;height:56px;">
+                <i class="fa-solid fa-building-columns fs-4 text-warning"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">New York Flagship Atelier</h4>
+                <p class="small text-muted mb-1">745 Fifth Avenue, Suite 2800, New York, NY 10151</p>
+                <span class="small fw-semibold text-dark"><i class="fa-solid fa-phone me-1 text-primary"></i> +1 (212) 888-LUXE</span>
+              </div>
+            </div>
+
+            <div class="d-flex gap-4 p-4 bg-light rounded-4 border">
+              <div class="btn btn-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:56px;height:56px;">
+                <i class="fa-solid fa-crown fs-4 text-warning"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">London Mayfair Salon</h4>
+                <p class="small text-muted mb-1">42 Berkeley Square, Mayfair, London W1J 5AW</p>
+                <span class="small fw-semibold text-dark"><i class="fa-solid fa-phone me-1 text-primary"></i> +44 (20) 7946 0912</span>
+              </div>
+            </div>
+
+            <div class="d-flex gap-4 p-4 bg-light rounded-4 border">
+              <div class="btn btn-dark rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:56px;height:56px;">
+                <i class="fa-solid fa-torii-gate fs-4 text-warning"></i>
+              </div>
+              <div>
+                <h4 class="h5 fw-bold mb-1">Tokyo Ginza Private Room</h4>
+                <p class="small text-muted mb-1">6-10-1 Ginza, Chuo City, Tokyo 104-0061</p>
+                <span class="small fw-semibold text-dark"><i class="fa-solid fa-phone me-1 text-primary"></i> +81 (3) 5555 0143</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="p-4 bg-dark text-white rounded-4 mt-4 text-center">
+            <span class="small text-warning text-uppercase fw-bold d-block mb-1">Encrypted Aviation Desk</span>
+            <span class="fs-5 fw-bold font-mono">vip@wanderluxe.com</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Confidential Form -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="card border-0 shadow-lg rounded-5 p-4 p-md-5 bg-white border">
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+              <div>
+                <h3 class="h4 fw-bold mb-1">Confidential Consultation Proposal</h3>
+                <p class="small text-muted mb-0">Your identity and travel coordinates are protected under strict NDA.</p>
+              </div>
+              <i class="fa-solid fa-user-shield fs-2 text-primary"></i>
+            </div>
+
+            <form class="row g-4" id="mainContactForm" onsubmit="handleContactDispatch(event)">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Full Name or Title</label>
+                <input type="text" class="form-control bg-light py-3 px-4 rounded-3 border-0 shadow-none" placeholder="Lord / Lady / Dr. / Name" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Private Dispatch Email</label>
+                <input type="email" class="form-control bg-light py-3 px-4 rounded-3 border-0 shadow-none" placeholder="vip@domain.com" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Direct Telephone</label>
+                <input type="tel" class="form-control bg-light py-3 px-4 rounded-3 border-0 shadow-none" placeholder="+1 (555) 000-0000" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Primary Voyage Interest</label>
+                <select class="form-select bg-light py-3 px-4 rounded-3 border-0 shadow-none" required>
+                  <option value="" disabled selected>Select expedition or charter...</option>
+                  <option value="jet">Around the World Private Jet (24 Days)</option>
+                  <option value="yacht">Superyacht Mediterranean Regatta</option>
+                  <option value="island">Private Island Buyout (Maldivian Coral)</option>
+                  <option value="custom">Bespoke Architectural Itinerary Design</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Estimated Investment Budget</label>
+                <select class="form-select bg-light py-3 px-4 rounded-3 border-0 shadow-none">
+                  <option value="100k">$50,000 - $150,000</option>
+                  <option value="250k" selected>$150,000 - $500,000</option>
+                  <option value="500k">$500,000 - $1,000,000+</option>
+                  <option value="charter">Full Aircraft / Yacht Charter ($1M+)</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small fw-bold text-dark">Preferred Consultation Method</label>
+                <select class="form-select bg-light py-3 px-4 rounded-3 border-0 shadow-none">
+                  <option value="phone">Secure Phone Call</option>
+                  <option value="zoom">Encrypted Video Conference</option>
+                  <option value="inperson">In-Person at Mayfair or NY Salon</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label small fw-bold text-dark">Voyage Details &amp; Special Requirements</label>
+                <textarea class="form-control bg-light py-3 px-4 rounded-3 border-0 shadow-none" rows="5" placeholder="Please outline desired departure dates, number of guests, specific security or medical requirements..." required></textarea>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check small text-muted">
+                  <input class="form-check-input shadow-none" type="checkbox" id="ndaCheck" required checked />
+                  <label class="form-check-label" for="ndaCheck">
+                    I confirm this inquiry is confidential. I agree to WanderLuxe Atelier's <a href="privacy-policy.html" class="text-dark fw-bold">Privacy Policy</a> and VIP Data Protection Terms.
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 rounded-pill fw-bold shadow">
+                  Transmit Encrypted Inquiry <i class="fa-solid fa-paper-plane ms-2"></i>
+                </button>
+              </div>
+            </form>
+
+            <div class="alert alert-success mt-4 d-none rounded-4 p-4 text-center" id="contactSuccessMessage">
+              <h4 class="h6 fw-bold mb-1"><i class="fa-solid fa-circle-check text-success me-1"></i> Inquiry Received Under Protocol</h4>
+              <p class="small text-muted mb-0">Your encrypted proposal has been dispatched to our Mayfair and New York senior partners. Expect a confidential telephone briefing within 2 hours.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Global Map Section -->
+  <section class="py-5 bg-light border-top" id="map-section">
+    <div class="container text-center mb-4" data-aos="fade-up">
+      <h3 class="h3 fw-bold mb-1">Global Private Aviation Corridors</h3>
+      <p class="text-muted small">WanderLuxe private aircraft maintain non-stop landing rights at 4,000+ FBO VIP terminals globally.</p>
+    </div>
+    <div class="container">
+      <div class="card border-0 rounded-5 overflow-hidden shadow-sm position-relative" style="height: 400px; background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=80') center/cover;">
+        <div class="position-absolute inset-0 bg-dark bg-opacity-50 d-flex align-items-center justify-content-center p-4 text-center text-white">
+          <div class="max-w-lg backdrop-blur bg-dark bg-opacity-75 p-4 rounded-4 border border-secondary border-opacity-50">
+            <i class="fa-solid fa-satellite-dish fs-2 text-warning mb-2"></i>
+            <h4 class="h5 fw-bold mb-1">Live Flight Tracking Desk</h4>
+            <p class="small text-light text-opacity-75 mb-3">Active clients can monitor their private Boeing 757 or superyacht telemetry in real-time via their secure member portal.</p>
+            <a href="tours.html" class="btn btn-primary btn-sm rounded-pill px-4 fw-bold">Explore Active Itineraries</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-4 border-top border-secondary border-opacity-25" id="footer">
+    <div class="container pt-4">
+      <div class="row g-5 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand text-white fs-2 mb-3 d-block" href="index.html">
+            Wander<span class="text-primary">Luxe</span><span class="text-warning">.</span>
+          </a>
+          <p class="text-light text-opacity-75 mb-4 pe-lg-4">The world's premier bespoke luxury travel atelier. Curating transformative expeditions, private jet circumnavigations, and superyacht charters.</p>
+          <div class="d-flex gap-3 social-links">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Sanctuaries</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Baa Atoll, Maldives</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Santorini Caldera</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">Kyoto Imperial</a></li>
+            <li><a href="destinations.html" class="text-light text-opacity-75 text-decoration-none">St. Barthélemy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">Navigation</h5>
+          <ul class="list-unstyled footer-links d-flex flex-column gap-2">
+            <li><a href="about.html" class="text-light text-opacity-75 text-decoration-none">Our Story &amp; Atelier</a></li>
+            <li><a href="tours.html" class="text-light text-opacity-75 text-decoration-none">Expedition Packages</a></li>
+            <li><a href="gallery.html" class="text-light text-opacity-75 text-decoration-none">Visual Showcase</a></li>
+            <li><a href="blog.html" class="text-light text-opacity-75 text-decoration-none">Travel Journal</a></li>
+            <li><a href="faq.html" class="text-light text-opacity-75 text-decoration-none">Private FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold mb-4 text-white">VIP Private Concierge</h5>
+          <p class="text-light text-opacity-75 mb-3">Available 24/7/365 for members and bespoke inquiries.</p>
+          <div class="d-flex align-items-center mb-3">
+            <i class="fa-solid fa-phone-volume fs-4 text-warning me-3"></i>
+            <div>
+              <span class="small text-muted d-block">Direct Global Hotline</span>
+              <a href="tel:+1800888LUXE" class="fs-5 fw-bold text-white text-decoration-none">+1 (800) 888-LUXE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-light text-opacity-50">
+        <p class="mb-2 mb-md-0">&copy; 2026 WanderLuxe Atelier Inc. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="privacy-policy.html" class="text-light text-opacity-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-light text-opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animate On Scroll (AOS) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Master Theme JS -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function handleContactDispatch(e) {
+      e.preventDefault();
+      document.getElementById('contactSuccessMessage').classList.remove('d-none');
+      e.target.reset();
+      window.scrollTo({ top: document.getElementById('contactSuccessMessage').offsetTop - 150, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
