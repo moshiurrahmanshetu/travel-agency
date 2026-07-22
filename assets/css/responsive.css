@@ -166,4 +166,7 @@
     height: 40px;
     font-size: 14px;
   }
+  .hide-in-small-device{
+    display: none;
+  }
 }
