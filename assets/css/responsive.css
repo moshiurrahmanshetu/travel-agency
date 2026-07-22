@@ -57,7 +57,7 @@
   .mega-footer {
     padding: 60px 0 0;
   }
-  .nav-link {
+  .nav-link, .navbar-brand {
     color: #fff !important;
 }
 }
