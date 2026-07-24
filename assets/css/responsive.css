@@ -3,6 +3,10 @@
    ========================================================================== */
 
 /* Large Devices (Tablets / Laptops below 1200px) */
+
+.dropdown-menu.show{
+  z-index: 9999;
+}
 @media (max-width: 1199.98px) {
   .hero-content h1 {
     font-size: 52px;
