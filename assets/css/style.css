@@ -980,7 +980,9 @@ img {
   align-items: center;
   justify-content: center;
 }
-
+.img-responsive{
+  max-width: 100%;
+}
 #scrollTopBtn.show {
   opacity: 1;
   visibility: visible;
