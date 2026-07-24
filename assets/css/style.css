@@ -71,6 +71,11 @@ img {
   color: var(--wl-white);
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1400px;
+    padding: 0 30px;
+  }
+
 /* ==========================================================================
    Loading Animation (Preloader)
    ========================================================================== */
@@ -732,6 +737,14 @@ img {
   justify-content: center;
   gap: 10px;
   margin-top: 50px;
+}
+.pagination li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination li a{
+  padding: 4px 14px;
 }
 
 .page-btn {
