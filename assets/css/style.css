@@ -161,7 +161,7 @@ img {
 .main-navbar {
   background-color: var(--wl-white);
   box-shadow: var(--shadow-sm);
-  padding: 16px 0;
+  padding: 10px 0;
   transition: all var(--transition-normal);
   z-index: 1030;
 }
@@ -183,7 +183,9 @@ img {
   color: var(--wl-dark) !important;
   letter-spacing: -0.5px;
 }
-
+.navbar-brand img{
+  height: 56px;
+}
 .navbar-brand span {
   color: var(--wl-primary);
 }
